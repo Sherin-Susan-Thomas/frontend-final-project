@@ -2,6 +2,7 @@
   "name": "technigo-react-starter",
   "version": "1.0.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",

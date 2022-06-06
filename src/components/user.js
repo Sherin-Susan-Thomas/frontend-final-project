@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createPost } from 'actions/posts';
 
-
+//Add picture and array!!!
 const User = () => {
 const [postData, setPostData] = useState({
-creator: ' ', title: ' ', message: ' ', tags: ' ', selectedFile: ' '
+title: ' ', description: ' ', username: ' ', categories: ' ', likes: ' ', comments: ' ', 
 });
 
 const dispatch = useDispatch();
@@ -24,32 +24,52 @@ return(
 <div>
     <form>Create a memory!
 
-    <label htmlFor="username">Creator</label>
+    <label htmlFor="title">Title</label>
 <input
   type="text"
-  value={postData.creator}
-  onChange={(e) => setPostData({ ...postData, creator: e.target.value })}
-/>
-
-<label htmlFor="title">Title</label>
-<input
-  type="title"
   value={postData.title}
   onChange={(e) => setPostData({ ...postData, title: e.target.value })}
+  onSubmit={handleSubmit}
 />
 
-<label htmlFor="message">Message</label>
+<label htmlFor="description">Description</label>
 <input
-  type="message"
-  value={postData.message}
-  onChange={(e) => setPostData({ ...postData, message: e.target.value })}
+  type="text"
+  value={postData.description}
+  onChange={(e) => setPostData({ ...postData, description: e.target.value })}
+  onSubmit={handleSubmit}
 />
 
-<label htmlFor="tags">Tags</label>
+<label htmlFor="username">Username</label>
 <input
-  type="tags"
-  value={postData.tags}
-  onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
+  type="text"
+  value={postData.username}
+  onChange={(e) => setPostData({ ...postData, username: e.target.value })}
+  onSubmit={handleSubmit}
+/>
+
+<label htmlFor="categories">Categories</label>
+<input
+  type="text"
+  value={postData.categories}
+  onChange={(e) => setPostData({ ...postData, categories: e.target.value })}
+  onSubmit={handleSubmit}
+/>
+
+<label htmlFor="likes">Likes</label>
+<input
+  type="number"
+  value={postData.likes}
+  onChange={(e) => setPostData({ ...postData, likes: e.target.value })}
+  onSubmit={handleSubmit}
+/>
+
+<label htmlFor="comments">Comments</label>
+<input
+  type="text"
+  value={postData.comments}
+  onChange={(e) => setPostData({ ...postData, comments: e.target.value })}
+  onSubmit={handleSubmit}
 />
 
 <button type="submit">Submit</button>

@@ -5,7 +5,7 @@ switch (action.type) {
     case 'FETCH ALL':
         return action.payload;
     case 'CREATE':
-        return posts;
+        return [...posts, action.payload]
     default: 
         return posts;
 }

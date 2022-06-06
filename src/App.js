@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Posts from 'components/posts';
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts';
+import User from 'components/user';
 
 
 export const App = () => {
@@ -17,6 +18,9 @@ dispatch(getPosts());
 
 
   return (
-    <Posts></Posts>
+    <>
+    <Posts />
+    <User />
+    </>
   )
 }

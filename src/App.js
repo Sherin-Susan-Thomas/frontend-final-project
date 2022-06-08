@@ -1,9 +1,11 @@
+import { TopBar } from 'components/topbar/TopBar'
 import React from 'react'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <>
+    <TopBar />
+
+    </>
   )
-}
+};

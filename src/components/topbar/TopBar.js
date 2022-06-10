@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./topbar.css";
 
 export const TopBar = () => {
@@ -13,8 +14,15 @@ export const TopBar = () => {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">HOME</li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">PROFILE</li>
+          <Link to="/newpost">
+            <li className="topListItem">
+              NEW POST
+              <span role="img" aria-label="image">
+                ✍️
+              </span>
+            </li>
+          </Link>
+          <li className="topListItem">FAVOURITES</li>
         </ul>
       </div>
       <div className="topRight">
@@ -23,7 +31,17 @@ export const TopBar = () => {
           src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png"
           alt=""
         ></img>
-        <i className="searchIcon fa-solid fa-magnifying-glass"></i>
+        <i className="searchIcon fa-solid fa-magnifying-glass">
+          <span className="searchIcon_input">
+            <input />
+          </span>
+        </i>
+        <button>
+          <Link to="/login">Login</Link>
+        </button>
+        <button>
+          <Link to="/">Register</Link>
+        </button>
       </div>
     </div>
   );

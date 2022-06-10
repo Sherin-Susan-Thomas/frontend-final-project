@@ -15,7 +15,10 @@
     border-radius: 50%;
     object-fit: cover;
 }
+.searchIcon_input {
+    padding: 10px;
 
+}
 .topIcon {
     font-size: 20px;
     margin-right: 10px;
@@ -31,7 +34,8 @@
 }
 
 .topCenter {
-    flex: 6;
+    flex: 3;
+    padding: 10px;
 }
 
 .topList {

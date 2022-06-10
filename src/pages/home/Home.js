@@ -9,10 +9,10 @@ import { Posts } from "components/posts/Posts";
 export const HomePage = () => {
   return (
     <>
-      <TopBar />
-      <Header />
-
       <div className="home">
+        <TopBar />
+        <Header />
+
         <Posts />
         <SideBar />
       </div>

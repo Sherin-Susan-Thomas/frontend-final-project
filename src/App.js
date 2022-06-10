@@ -1,10 +1,10 @@
 import React from "react";
-import { HomePage } from "pages/home/Home";
-import { Login } from "pages/login/Login";
-import { Register } from "pages/register/Register";
+import { HomePage } from "pages/home/home";
+import { Login } from "pages/login/login";
+import { Register } from "pages/register/register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Single } from "pages/single/Single";
-import { Write } from "pages/write/Write";
+import { Single } from "pages/single/single";
+import { Write } from "pages/write/write";
 export const App = () => {
   return (
     <>

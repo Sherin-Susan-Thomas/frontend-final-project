@@ -1,0 +1,29 @@
+.post{
+    width: 385px;
+    margin: 0px 25px 40px 25px;
+}
+.postImg{
+    width:100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postDetails{
+    color:blue;
+}
+.postDate{
+    font-style: italic;
+    font-size: 12px;
+}
+.postDesc{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

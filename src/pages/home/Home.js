@@ -3,7 +3,6 @@ import { Header } from "components/header/Header";
 import { TopBar } from "components/topbar/TopBar";
 import "./home.css";
 import { SideBar } from "components/sidebar/Sidebar";
-import { Posts } from "components/posts/posts";
 
 export const HomePage = () => {
   return (
@@ -12,7 +11,6 @@ export const HomePage = () => {
       <Header />
 
       <div className="home">
-        <Posts />
         <SideBar />
       </div>
     </>

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Header } from "components/header/header";
-import { TopBar } from "components/topbar/topBar";
+import { Header } from "components/header/Header";
+import { TopBar } from "components/topbar/TopBar";
 
 import "./home.css";
-import { SideBar } from "components/sidebar/sidebar";
+import { SideBar } from "components/sidebar/Sidebar";
 import { Posts } from "components/posts/posts";
 export const HomePage = () => {
   return (

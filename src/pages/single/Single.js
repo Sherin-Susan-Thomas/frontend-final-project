@@ -1,7 +1,7 @@
 import React from "react";
 
-import { SideBar } from "components/sidebar/sidebar";
-import { SinglePost } from "components/singlepost/singlePost";
+import { SideBar } from "components/sidebar/Sidebar";
+import { SinglePost } from "components/singlepost/SinglePost";
 
 import "./single.css";
 

@@ -9,7 +9,7 @@ export const Write = () => {
         <button>Back to homepage</button>
       </Link>
       <div className="write">
-        <img className="writeImg" src="" alt="" />
+        <img className="writeImge" src="" alt="" />
         <form className="writeForm">
           <div className="writeFormGroup">
             <label htmlFor="fileInput">

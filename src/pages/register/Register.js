@@ -36,7 +36,10 @@ export const Register = () => {
   };
   return (
     <div className="Register">
-      <span className="RegisterTitle">Register</span>
+
+
+      <span className="RegisterTitle">REGISTER HERE.</span>
+      <div className="registerBox">
       <form className="RegisterForm" onSubmit={handleOnSubmit}>
         <label htmlFor="username">Username</label>
         <input
@@ -67,6 +70,8 @@ export const Register = () => {
       <button className="registerLoginButton">
         <Link to="/login">Already have an account? Login</Link>
       </button>
-    </div>
+      </div>
+      </div>
+ 
   );
 };

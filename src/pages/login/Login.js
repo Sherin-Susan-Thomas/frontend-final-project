@@ -33,7 +33,8 @@ export const Login = () => {
   };
   return (
     <div className="login">
-      <span className="loginTitle">login</span>
+      <span className="loginTitle">LOG IN HERE.</span>
+      <div className="loginBox">
       <form className="loginForm" onSubmit={handleOnSubmit}>
         <label htmlFor="username">Username</label>
         <input
@@ -51,10 +52,13 @@ export const Login = () => {
         />
         <button className="loginButton">Login</button>
         <p>{errorMessage}</p>
+       
         <button className="loginRegisterButton">
+        
           <Link to="/">New User? Create a new Acoount</Link>{" "}
         </button>
       </form>
+      </div>
     </div>
   );
 };

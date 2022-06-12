@@ -1,0 +1,31 @@
+body{
+    background-color: #342B38;
+    font-family: 'Jost', sans-serif;
+    margin: 60px;
+}
+
+.Register{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginTitle{
+    font-size: 94pt;
+    color: #BBF1C8;
+    margin-bottom: -20px;
+}
+
+.loginBox{ 
+    background-color: #BBF1C8;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+    font-size: 18pt;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+justify-content: flex-end;
+padding: 10px;
+}

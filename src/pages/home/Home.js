@@ -17,7 +17,7 @@ const [posts, setPosts] = useState([])
 useEffect(() =>{
   const fetchPosts = async () =>{
   const res = await  axios.get("https://final-sprint.herokuapp.com/api/posts")
-console.log(res)
+setPosts(res.data)
 }
 fetchPosts()
 },[])

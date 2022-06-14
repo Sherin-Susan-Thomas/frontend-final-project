@@ -7,7 +7,6 @@ export const Write = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-
   const [url, setUrl] = useState("");
   const user = localStorage.getItem("user");
   const [errorMessage, setErrorMessage] = useState("");
@@ -24,11 +23,13 @@ export const Write = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setUrl(data.url);
       })
       .catch((err) => {
         console.log(err);
       });
+
     fetch(`${API_URL}/posts`, {
       method: "POST",
       headers: {
@@ -43,11 +44,14 @@ export const Write = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (user) {
+        if (data.success === false) {
+          setErrorMessage("Try posting again");
+          setSuccessMessage("");
+        } else {
           console.log(data);
           setSuccessMessage(`created new post by ${user}`);
-        } else if (!user) {
-          setErrorMessage("Try posting again");
+          setErrorMessage("");
+          setTimeout(window.location.replace("/home"), 2000);
         }
       });
   };
@@ -68,6 +72,7 @@ export const Write = () => {
             <input
               id="fileInput"
               type="file"
+              required
               onChange={(e) => setImage(e.target.files[0])}
             />
             <input
@@ -76,6 +81,7 @@ export const Write = () => {
               type="text"
               autoFocus={true}
               value={title}
+              required
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
@@ -84,6 +90,7 @@ export const Write = () => {
               className="writeInput writeText"
               placeholder="Tell your story..."
               type="text"
+              required
               autoFocus={true}
               value={description}
               onChange={(e) => setDescription(e.target.value)}

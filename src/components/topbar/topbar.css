@@ -1,7 +1,7 @@
 .topBar {
     height: 100px;
     width:100%;
-    background-color: #BBF1C8;
+    background-color: #ffff;
     position: sticky;
     top:0;
     display: flex;

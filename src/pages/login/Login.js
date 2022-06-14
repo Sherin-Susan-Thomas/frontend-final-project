@@ -24,8 +24,9 @@ export const Login = () => {
         if (data.success === false) {
           setErrorMessage("Wrong Credentials. Try again!");
         } else {
-          if (data.success === false)
+          if (data.success === true)
             localStorage.setItem("accessToken", data.accessToken);
+          localStorage.setItem("user", data.username);
           navigate("/home");
         }
       })
@@ -35,29 +36,28 @@ export const Login = () => {
     <div className="login">
       <span className="loginTitle">LOG IN HERE.</span>
       <div className="loginBox">
-      <form className="loginForm" onSubmit={handleOnSubmit}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          placeholder="Enter your username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="text"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button className="loginButton">Login</button>
-        <p>{errorMessage}</p>
-       
-        <button className="loginRegisterButton">
-        
-          <Link to="/">New User? Create a new Acoount</Link>{" "}
-        </button>
-      </form>
+        <form className="loginForm" onSubmit={handleOnSubmit}>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            placeholder="Enter your username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="text"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="loginButton">Login</button>
+          <p>{errorMessage}</p>
+
+          <button className="loginRegisterButton">
+            <Link to="/">New User? Create a new Acoount</Link>{" "}
+          </button>
+        </form>
       </div>
     </div>
   );

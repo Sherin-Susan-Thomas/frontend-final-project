@@ -5,6 +5,7 @@ import { Register } from "pages/register/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Single } from "pages/single/Single";
 import { Write } from "pages/write/Write";
+
 export const App = () => {
   return (
     <>

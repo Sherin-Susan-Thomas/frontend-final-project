@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { API_URL } from "components/utils/url";
 import "./login.css";
@@ -15,7 +15,12 @@ export const Login = () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: username, password: password }),
   };
-
+  useEffect(() => {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      navigate("/home");
+    }
+  }, [navigate]);
   const handleOnSubmit = (e) => {
     e.preventDefault();
     fetch(`${API_URL}/auth/login`, options)
@@ -26,12 +31,15 @@ export const Login = () => {
         } else {
           if (data.success === true)
             localStorage.setItem("accessToken", data.accessToken);
+          localStorage.setItem("userData", JSON.stringify(data));
           localStorage.setItem("user", data.username);
+          console.log(data);
           navigate("/home");
         }
       })
       .catch((error) => console.log(error));
   };
+
   return (
     <div className="login">
       <span className="loginTitle">LOG IN HERE.</span>

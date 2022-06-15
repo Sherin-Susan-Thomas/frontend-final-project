@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "./topbar.css";
 
 export const TopBar = () => {
+  const user = JSON.parse(localStorage.getItem("userData"));
+  const p = localStorage.getItem("profilepicture");
+
   return (
     <div className="topBar">
       {/* <div className="topLeft">
@@ -26,21 +29,19 @@ export const TopBar = () => {
         </ul>
       </div>
       <div className="topRight">
-        <img
-          className="topImg"
-          src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png"
-          alt=""
-        ></img>
+        <img className="topImg" src={p} alt=""></img>
+        <Link to="/users/:id">
+          <h2>{user.username}</h2>{" "}
+        </Link>
         <i className="searchIcon fa-solid fa-magnifying-glass">
           <span className="searchIcon_input">
             <input />
           </span>
         </i>
         <button>
-          <Link to="/login">Login</Link>
-        </button>
-        <button>
-          <Link to="/">Register</Link>
+          <Link to="/" onClick={() => window.localStorage.clear()}>
+            Logout
+          </Link>
         </button>
       </div>
     </div>

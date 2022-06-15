@@ -1,54 +1,114 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./singlepost.css";
+import axios from "axios";
 
 export const SinglePost = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const [update, setUpdate] = useState("");
+  const navigate = useNavigate();
+  const user = localStorage.getItem("user");
+
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const [post, setPost] = useState({});
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get(
+        "https://final-sprint.herokuapp.com/api/posts/" + path
+      );
+      console.log(res);
+      setPost(res.data);
+    };
+    getPost();
+  }, [path]);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(
+        "https://final-sprint.herokuapp.com/api/posts/" + path,
+        { data: { username: user } }
+      );
+      navigate("/home");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleupdate = async () => {
+    try {
+      await axios.put("https://final-sprint.herokuapp.com/api/posts/" + path, {
+        username: user,
+        title: title,
+        description: description,
+      });
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="singlePost">
       SINGLE POST
       <div className="singlePostWrapper">
-        <img
-          src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-          alt=""
-          className="singlePostImg"
-        ></img>
-        <h1 className="singlePostTitle">
-          lorem ipsum lorem ipsum
-          <div className="singlePostEdit">
-            <i className="singlePostIcon">
-              <span role="img" aria-label="image">
-                ✏️
-              </span>
-            </i>
-            <i className="singlePostIcon">
-              <span role="img" aria-label="image">
-                ❌
-              </span>
-            </i>
-          </div>
-        </h1>
+        {post.picture && (
+          <img src={post.picture} alt="" className="singlePostImg" />
+        )}
+        {update ? (
+          <input
+            type="text"
+            value={title}
+            className="singlePostTitleInput"
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        ) : (
+          <h1 className="singlePostTitle">
+            {post.title}
+            {post.username === user && (
+              <div className="singlePostEdit">
+                <i
+                  className="singlePostIcon far fa-edit"
+                  onClick={() => setUpdate(true)}
+                ></i>
+                <i
+                  className="singlePostIcon far fa-trash-alt"
+                  onClick={handleDelete}
+                ></i>
+              </div>
+            )}
+          </h1>
+        )}
         <div className="singlePostInfo">
           <span className="singlepostAuthor">
-            <b>Author:**NAME**</b>
+            <b>Author:{post.username}</b>
           </span>
         </div>
-        <div className="singlePostDesc">
-          <span className="singlepostdesc">
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-            aliquid ex ea commodi consequatur? Quis autem vel eum iure
-            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-            pariatur?"
-          </span>
-        </div>
+        <span className="singlePostDate">
+          <b>{new Date(post.createdAt).toDateString()}</b>
+        </span>
+        {update ? (
+          <input
+            type="textarea"
+            value={description}
+            className="singlepostdescInput"
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        ) : (
+          <div className="singlePostDesc">
+            <span className="singlepostdesc">{post.description}</span>
+          </div>
+        )}
+        {update ? (
+          <button className="singlePostButton" onClick={handleupdate}>
+            Update post
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

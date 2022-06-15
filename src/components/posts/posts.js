@@ -1,10 +1,15 @@
 import React from "react";
 import "./posts.css";
 import { Post } from "components/post/Post";
-export const Posts = () => {
+
+export const Posts = ({ posts }) => {
   return (
     <div className="posts">
-      <Post />
+      {posts.map((p) => (
+        <div key={p._id}>
+          <Post post={p} />
+        </div>
+      ))}
     </div>
   );
 };

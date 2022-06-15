@@ -1,53 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./singlepost.css";
+import axios from "axios";
 
 export const SinglePost = () => {
+  const navigate = useNavigate();
+  const user = localStorage.getItem("user");
+
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const [post, setPost] = useState({});
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get(
+        "https://final-sprint.herokuapp.com/api/posts/" + path
+      );
+      console.log(res);
+      setPost(res.data);
+    };
+    getPost();
+  }, [path]);
+  const handleDelete = async () => {
+    try {
+      await axios.delete(
+        "https://final-sprint.herokuapp.com/api/posts/" + path,
+        { data: { username: user } }
+      );
+      navigate("/home");
+    } catch (err) {}
+  };
+  console.log(post.username === user);
   return (
     <div className="singlePost">
       SINGLE POST
       <div className="singlePostWrapper">
-        <img
-          src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-          alt=""
-          className="singlePostImg"
-        ></img>
+        {post.picture && (
+          <img src={post.picture} alt="" className="singlePostImg" />
+        )}
+
         <h1 className="singlePostTitle">
-          lorem ipsum lorem ipsum
-          <div className="singlePostEdit">
-            <i className="singlePostIcon">
-              <span role="img" aria-label="image">
-                ✏️
-              </span>
-            </i>
-            <i className="singlePostIcon">
-              <span role="img" aria-label="image">
-                ❌
-              </span>
-            </i>
-          </div>
+          {post.title}
+          {post.username === user && (
+            <div className="singlePostEdit">
+              <i className="singlePostIcon far fa-edit"></i>
+              <i
+                className="singlePostIcon far fa-trash-alt"
+                onClick={handleDelete}
+              ></i>
+            </div>
+          )}
         </h1>
+
         <div className="singlePostInfo">
           <span className="singlepostAuthor">
-            <b>Author:**NAME**</b>
+            <b>Author:{post.username}</b>
           </span>
         </div>
+        <span className="singlePostDate">
+          <b>{new Date(post.createdAt).toDateString()}</b>
+        </span>
         <div className="singlePostDesc">
-          <span className="singlepostdesc">
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-            aliquid ex ea commodi consequatur? Quis autem vel eum iure
-            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-            pariatur?"
-          </span>
+          <span className="singlepostdesc">{post.description}</span>
         </div>
       </div>
     </div>

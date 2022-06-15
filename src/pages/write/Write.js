@@ -75,6 +75,8 @@ export const Write = () => {
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
+            <button>Update Picture</button>
+
             <input
               className="writeInput"
               placeholder="Title"

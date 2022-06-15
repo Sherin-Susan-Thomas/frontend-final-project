@@ -1,124 +1,33 @@
 import React from "react";
-
 import "./post.css";
-export const Post = () => {
+import { Link } from "react-router-dom";
+
+export const Post = ({ post }) => {
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-        alt=""
-      ></img>
+      <Link to={`/post/${post._id}`} className="link">
+        <h1>
+          <span className="postTitle">{post.title}</span>
+        </h1>
+      </Link>
+      <Link to={`/home/?user=${post.username}`} className="link">
+        <p className="postAuthor">{post.username}</p>
+      </Link>
+
+      {post.picture && <img className="postImg" src={post.picture} alt="" />}
       <div className="postInfo">
         <div className="postDetails">
-          <span className="postDetail">RIO</span>
+          {post.categories.map((c) => (
+            <span className="postCat">{c.name}</span>
+          ))}
         </div>
-        <span className="postDescription">
-          ate velit esse cillum dolore eu fugiat nulla pariatur
-        </span>
+
         <br />
-        <span className="postDate">1 hour ago</span>
-      </div>
-      <div className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipicididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-      <img
-        className="postImg"
-        src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-        alt=""
-      ></img>
-      <div className="postInfo">
-        <div className="postDetails">
-          <span className="postDetail">RIO</span>
-        </div>
-        <span className="postDescription">
-          ate velit esse cillum dolore eu fugiat nulla pariatur
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
         </span>
-        <br />
-        <span className="postDate">1 hour ago</span>
       </div>
-      <div className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipicididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-      <img
-        className="postImg"
-        src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-        alt=""
-      ></img>
-      <div className="postInfo">
-        <div className="postDetails">
-          <span className="postDetail">RIO</span>
-        </div>
-        <span className="postDescription">
-          ate velit esse cillum dolore eu fugiat nulla pariatur
-        </span>
-        <br />
-        <span className="postDate">1 hour ago</span>
-      </div>
-      <div className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipicididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-      <img
-        className="postImg"
-        src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-        alt=""
-      ></img>
-      <div className="postInfo">
-        <div className="postDetails">
-          <span className="postDetail">RIO</span>
-        </div>
-        <span className="postDescription">
-          ate velit esse cillum dolore eu fugiat nulla pariatur
-        </span>
-        <br />
-        <span className="postDate">1 hour ago</span>
-      </div>
-      <div className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipicididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-      <img
-        className="postImg"
-        src="https://resebloggaren.se/wp-content/uploads/2020/02/rio-de-janeiro-1963744_1920.jpg"
-        alt=""
-      ></img>
-      <div className="postInfo">
-        <div className="postDetails">
-          <span className="postDetail">RIO</span>
-        </div>
-        <span className="postDescription">
-          ate velit esse cillum dolore eu fugiat nulla pariatur
-        </span>
-        <br />
-        <span className="postDate">1 hour ago</span>
-      </div>
-      <div className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipicididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+      <div className="postDesc">{post.description}</div>
     </div>
   );
 };

@@ -19,6 +19,7 @@ export const Profile = () => {
     const Updateduser = {
       userId: user._id,
       username: user.username,
+      profilepicture: url,
     };
     const data = new FormData();
     data.append("file", image);
@@ -40,8 +41,6 @@ export const Profile = () => {
           console.log("data", data);
           console.log(data.url);
           setUrl(data.url);
-          localStorage.setItem("profilepicture", data.url);
-          window.location.reload();
         }
       })
       .catch((err) => {
@@ -76,14 +75,14 @@ export const Profile = () => {
         <div className="settingsTitle"></div>
         <h1>{user.username}</h1>
         <form className="settingsForm" onSubmit={(e) => e.preventDefault()}>
-          <label>Profile Picture</label>
+          <label></label>
           <div className="settingsPP">
-            <img src={p} alt="" />
-            <label htmlFor="fileInput">
-              <i className="settingsPPIcon far fa-user-circle"></i>{" "}
-            </label>
+            <label htmlFor="fileInput"></label>
+            <br />
+            <img src={url} alt="" />
             <input
               id="fileInput"
+              placeholder="Choose a new picture"
               type="file"
               className="settingsPPInput"
               onChange={(e) => setImage(e.target.files[0])}

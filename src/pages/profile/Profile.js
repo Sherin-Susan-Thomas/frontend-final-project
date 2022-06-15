@@ -23,7 +23,7 @@ export const Profile = () => {
     };
     const data = new FormData();
     data.append("file", image);
-    data.append("upload_preset", "profile-picture");
+    data.append("upload_preset", "final-project");
     data.append("cloud_name", "dsfrrrml8");
     fetch(
       "https://api.cloudinary.com/v1_1/dsfrrrml8/image/upload",
@@ -53,6 +53,7 @@ export const Profile = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        username: user.username,
         profilepicture: url,
       }),
     })

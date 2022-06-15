@@ -16,11 +16,7 @@ export const Post = ({ post }) => {
 
       {post.picture && <img className="postImg" src={post.picture} alt="" />}
       <div className="postInfo">
-        <div className="postDetails">
-          {post.categories.map((c) => (
-            <span className="postCat">{c.name}</span>
-          ))}
-        </div>
+        <div className="postDetails"></div>
 
         <br />
         <span className="postDate">
@@ -28,6 +24,12 @@ export const Post = ({ post }) => {
         </span>
       </div>
       <div className="postDesc">{post.description}</div>
+      <button className="likeButton">
+        <span className="hearts" role="img" aria-label="heart image">
+          ❤️
+        </span>
+      </button>
+      <span className="likes"> x {post.likes}</span>
     </div>
   );
 };

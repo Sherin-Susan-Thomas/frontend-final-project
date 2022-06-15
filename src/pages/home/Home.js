@@ -23,6 +23,7 @@ export const HomePage = () => {
     };
     fetchPosts();
   }, [search]);
+
   return (
     <>
       <div className="home">

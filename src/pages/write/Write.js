@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./write.css";
+
 import { API_URL } from "components/utils/url";
 import { useNavigate } from "react-router-dom";
 export const Write = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
   const [image, setImage] = useState("");
   const [url, setUrl] = useState("");
   const user = localStorage.getItem("user");
@@ -75,7 +77,7 @@ export const Write = () => {
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <button>Update Picture</button>
+            <button onClick={() => postDetails()}>Update Picture</button>
 
             <input
               className="writeInput"

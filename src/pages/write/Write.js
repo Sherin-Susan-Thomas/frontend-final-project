@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./write.css";
 import { API_URL } from "components/utils/url";
-
+import { useNavigate } from "react-router-dom";
 export const Write = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -13,6 +13,7 @@ export const Write = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
   const postDetails = () => {
+    const navigate = useNavigate();
     const data = new FormData();
     data.append("file", image);
     data.append("upload_preset", "final-project");
@@ -51,7 +52,7 @@ export const Write = () => {
           console.log(data);
           setSuccessMessage(`created new post by ${user}`);
           setErrorMessage("");
-          setTimeout(window.location.replace("/home"), 2000);
+          navigate("/home");
         }
       });
   };

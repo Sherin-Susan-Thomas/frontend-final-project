@@ -11,9 +11,8 @@ export const Write = () => {
   const user = localStorage.getItem("user");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-
+  const navigate = useNavigate();
   const postDetails = () => {
-    const navigate = useNavigate();
     const data = new FormData();
     data.append("file", image);
     data.append("upload_preset", "final-project");

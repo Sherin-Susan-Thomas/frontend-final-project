@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./post.css";
 import { Link } from "react-router-dom";
 
@@ -31,11 +31,13 @@ export const Post = ({ post }) => {
       <Link to={`/post/${post._id}`} className="link">
         <button>Read More</button> <br />
       </Link>
+
       <button className="likeButton">
         <span className="hearts" role="img" aria-label="heart image">
           ❤️
         </span>
       </button>
+
       <span className="likes"> x {post.likes}</span>
     </div>
   );

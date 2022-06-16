@@ -11,12 +11,12 @@ body{
 
 .loginTitle{
     font-size: 94pt;
-    color: #BBF1C8;
+   color: white;
     margin-bottom: -20px;
 }
 
 .loginBox{ 
-    background-color: #BBF1C8;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
     margin-top: 50px;
     border-radius: 10px;

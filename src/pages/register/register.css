@@ -13,12 +13,12 @@ body{
 
 .RegisterTitle{
     font-size: 58pt;
-    color: #BBF1C8;
+    color: #e6f4e9;
     margin-bottom: -20px;
 }
 
 .registerBox{ 
-    background-color: #BBF1C8;
+    background-color: rgba(255, 255, 255, 0.5);
     opacity: 0.9;
     margin-top: 35px;
     padding: 30px;
@@ -43,7 +43,7 @@ body{
         font-weight: 700;
       align-items: center;
       appearance: none;
-      background-color: #FF9595;
+      background-color: rgba(255, 255, 255, 0.5);
       border-radius: 25px;
       border-style: none;
       box-sizing: border-box;

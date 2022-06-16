@@ -34,6 +34,7 @@ export const TopBar = () => {
       </div>
       <div className="topRight">
         <img className="topImg" src={p} alt=""></img>
+
         <Link to="/users/:id">
           <h2>{user.username}</h2>{" "}
         </Link>

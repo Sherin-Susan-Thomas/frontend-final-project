@@ -89,13 +89,19 @@ export const Profile = () => {
               onChange={(e) => setImage(e.target.files[0])}
             />
           </div>
-
           <button
             className="settingsSubmitButton"
             type="submit"
             onClick={() => postDetails()}
           >
-            Update Profile picture
+            Add pciture
+          </button>
+          <button
+            className="settingsSubmitButton"
+            type="submit"
+            onClick={() => postDetails()}
+          >
+            Update Profile
           </button>
         </form>
         <p>{errorMessage}</p>

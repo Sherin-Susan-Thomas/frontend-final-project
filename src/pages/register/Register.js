@@ -7,7 +7,9 @@ import "./register.css";
 export const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordShown, setPasswordShown] = useState(false);
   const [pwdRequiste, setPWDRquisite] = useState(false);
+
   const [checks, setChecks] = useState({
     capsLetterCheck: false,
     numberCheck: false,
@@ -41,7 +43,16 @@ export const Register = () => {
       specialCharCheck,
     });
   };
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
+  const showicon = (
+    <i class="fas fa-eye-slash" aria-hidden="true" onClick={togglePassword}></i>
+  );
 
+  const hideicon = (
+    <i class="far fa-eye" aria-hidden="true" onClick={togglePassword}></i>
+  );
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -90,16 +101,20 @@ export const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            required
-            placeholder="Enter your password"
-            value={password}
-            onChange={handleOnChange}
-            onFocus={handleOnFocus}
-            onBlur={handleOnBlur}
-            onKeyUp={handleOnKeyUp}
-          />
+          <span>
+            <input
+              type={passwordShown ? "text" : "password"}
+              required
+              placeholder="Enter your password"
+              value={password}
+              onChange={handleOnChange}
+              onFocus={handleOnFocus}
+              onBlur={handleOnBlur}
+              onKeyUp={handleOnKeyUp}
+            />
+            {!passwordShown ? showicon : hideicon}
+          </span>
+
           {pwdRequiste ? (
             <PWDRequisite
               capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
@@ -110,7 +125,6 @@ export const Register = () => {
           ) : null}
           <p className="errorMessage">{errorMessage}</p>
           <p className="errorMessage">{successMessage}</p>
-
           <div className="buttonBox">
             <button className="registerButton"> REGISTER</button>
 

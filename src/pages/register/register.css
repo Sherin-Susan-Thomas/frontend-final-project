@@ -37,9 +37,89 @@ width:80%;
 padding: 10px;
 }
 
-button{
-    width: 50px;
-    font-family: 'Jost', sans-serif;  
-    font-size: 20pt;
-border-radius: 10px;
-}
+ .registerButton, .registerLoginButton {
+        font-family: 'Jost', sans-seri;
+        font-size: 20px;
+        font-weight: 700;
+      align-items: center;
+      appearance: none;
+      background-color: #FF9595;
+      border-radius: 25px;
+      border-style: none;
+      box-sizing: border-box;
+      color: #342B38;
+      cursor: pointer;
+      display: inline-flex;
+      height: 50px;
+      justify-content: center;
+      letter-spacing: .40px;
+      max-width: 90%px;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform,opacity;
+      z-index: 0;
+    }
+
+  
+
+
+    
+    button-17:hover {
+      background: #F6F9FE;
+      color: #174ea6;
+    }
+    
+    button-17:active {
+      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+      outline: none;
+    }
+    
+    button-17:focus {
+      outline: none;
+      border: 2px solid #4285f4;
+    }
+    
+    button:not(:disabled) {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+    
+    button:not(:disabled):hover {
+      box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+    }
+    
+    button:not(:disabled):focus {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+    
+    button:not(:disabled):active {
+      box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+    }
+    
+    button:disabled {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    /*Media queries*/
+
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+        body{
+            margin: 70px;
+        }
+
+
+        .RegisterTitle{
+            font-size: 88pt;
+            margin-bottom: -10px;
+        }
+        .registerButton, .registerLoginButton {
+         max-width: 50%;      
+        }
+    }

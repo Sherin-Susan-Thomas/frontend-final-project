@@ -38,8 +38,10 @@ export const Register = () => {
     <div className="Register">
 
 
-      <span className="RegisterTitle">REGISTER HERE.</span>
+      <span className="RegisterTitle">MEMORY</span>
+      <span className="RegisterTitle">BOX.</span>
       <div className="registerBox">
+      <p class="z-depth-5"></p>
       <form className="RegisterForm" onSubmit={handleOnSubmit}>
         <label htmlFor="username">Username</label>
         <input
@@ -64,12 +66,16 @@ export const Register = () => {
         />
         <p className="errorMessage">{errorMessage}</p>
         <p className="errorMessage">{successMessage}</p>
-        <button className="registerButton"> Register</button>
-      </form>
 
+        <div className="buttonBox">
+        <button className="registerButton"> REGISTER</button>
+      
+<p>Already have an account? </p>
       <button className="registerLoginButton">
-        <Link to="/login">Already have an account? Login</Link>
+        <Link to="/login">LOGIN</Link>
       </button>
+      </div>
+      </form>
       </div>
       </div>
  

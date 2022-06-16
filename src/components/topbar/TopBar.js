@@ -5,7 +5,8 @@ import "./topbar.css";
 export const TopBar = () => {
   const user = JSON.parse(localStorage.getItem("userData"));
   const p = localStorage.getItem("profilepicture");
-
+  const id = user._id;
+  console.log("id", id);
   return (
     <div className="topBar">
       {/* <div className="topLeft">
@@ -35,7 +36,7 @@ export const TopBar = () => {
       <div className="topRight">
         <img className="topImg" src={p} alt=""></img>
 
-        <Link to="/users/:id">
+        <Link to={`/users/${id}`}>
           <h2>{user.username}</h2>{" "}
         </Link>
 

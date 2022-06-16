@@ -16,7 +16,12 @@ body{
     color: #e6f4e9;
     margin-bottom: -20px;
 }
-
+.invalid{
+  color:red
+}
+.valid{
+  color:green
+}
 .registerBox{ 
     background-color: rgba(255, 255, 255, 0.5);
     opacity: 0.9;

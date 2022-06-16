@@ -108,30 +108,37 @@ export const Profile = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [image, setImage] = useState("");
   const [url, setUrl] = useState("");
-  const postpicture = () => {
-    const data = new FormData();
-    data.append("file", image);
-    data.append("upload_preset", "final-project");
-    data.append("cloud_name", "dsfrrrml8");
-    fetch("https://api.cloudinary.com/v1_1/dsfrrrml8/image/upload", {
-      method: "POST",
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setUrl(data.url);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
   const postDetails = () => {
     const Updateduser = {
       userId: user._id,
       username: user.username,
       profilepicture: url,
     };
+    const data = new FormData();
+    data.append("file", image);
+    data.append("upload_preset", "final-project");
+    data.append("cloud_name", "dsfrrrml8");
+    fetch(
+      "https://api.cloudinary.com/v1_1/dsfrrrml8/image/upload",
+
+      {
+        method: "POST",
+        body: data,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          console.log("upload a picture");
+        } else {
+          console.log("data", data);
+          console.log(data.url);
+          setUrl(data.url);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     fetch(`${API_URL}/users/${id}`, Updateduser, {
       method: "PUT",
@@ -149,7 +156,7 @@ export const Profile = () => {
           setErrorMessage("Try posting again");
           setSuccessMessage("");
         } else {
-          console.log("data", data);
+          console.log(data);
           setTimeout(setSuccessMessage("updated successfully"), 2000);
           setErrorMessage("");
         }

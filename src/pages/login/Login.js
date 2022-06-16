@@ -6,10 +6,24 @@ import "./login.css";
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordShown, setPasswordShown] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
+  const showicon = (
+    <i
+      class="fas fa-eye-slash fa-sm"
+      aria-hidden="true"
+      onClick={togglePassword}
+    ></i>
+  );
 
+  const hideicon = (
+    <i class="far fa-eye fa-sm" aria-hidden="true" onClick={togglePassword}></i>
+  );
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -53,12 +67,15 @@ export const Login = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
           <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <span>
+            <input
+              type={passwordShown ? "text" : "password"}
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            {!passwordShown ? showicon : hideicon}
+          </span>
           <button className="loginButton">Login</button>
           <p>{errorMessage}</p>
 

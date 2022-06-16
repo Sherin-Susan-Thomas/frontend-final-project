@@ -1,7 +1,9 @@
 body{
-    background-color: #342B38;
-    font-family: 'Jost', sans-serif;
-    margin: 60px;
+    background-image: url(https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Jost', sans-seri;
+    margin: 30px;
 }
 
 .Register{
@@ -10,34 +12,32 @@ body{
 }
 
 .RegisterTitle{
-    font-size: 94pt;
+    font-size: 58pt;
     color: #BBF1C8;
     margin-bottom: -20px;
 }
 
 .registerBox{ 
     background-color: #BBF1C8;
+    opacity: 0.9;
+    margin-top: 35px;
     padding: 30px;
-    margin-top: 50px;
-    border-radius: 10px;
-    font-size: 18pt;
+    border-radius: 15pt;
 }
 
 .RegisterForm{
     display: flex;
     flex-direction: column;
-justify-content: flex-end;
-padding: 10px;
 }
 
-input{
-background-color: #80BDAB;
-font-size: 16pt;
-width:80%;
-padding: 10px;
+.buttonBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
- .registerButton, .registerLoginButton {
+    .registerButton, .registerLoginButton {
         font-family: 'Jost', sans-seri;
         font-size: 20px;
         font-weight: 700;

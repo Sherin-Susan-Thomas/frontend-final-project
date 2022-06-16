@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { API_URL } from "components/utils/url";
 import PWDRequisite from "./PWDRequisite";
+import validator from "validator";
 import "./register.css";
 
 export const Register = () => {
@@ -9,6 +10,7 @@ export const Register = () => {
   const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
   const [pwdRequiste, setPWDRquisite] = useState(false);
+  const [error, setError] = useState("");
 
   const [checks, setChecks] = useState({
     capsLetterCheck: false,
@@ -19,9 +21,6 @@ export const Register = () => {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const handleOnChange = (e) => {
-    setPassword(e.target.value);
-  };
 
   const handleOnFocus = () => {
     setPWDRquisite(true);
@@ -53,6 +52,25 @@ export const Register = () => {
   const hideicon = (
     <i class="far fa-eye" aria-hidden="true" onClick={togglePassword}></i>
   );
+  const validate = (value) => {
+    if (
+      validator.isStrongPassword(value, {
+        minLength: 8,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1,
+        minSymbols: 1,
+      })
+    ) {
+      setError("Is Strong Password");
+    } else {
+      setError("Is Not Strong Password");
+    }
+  };
+  const handleOnChange = (e) => {
+    validate(e.target.value);
+    setPassword(e.target.value);
+  };
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -70,9 +88,12 @@ export const Register = () => {
       .then((data) => {
         if (data.success === false) {
           setErrorMessage("Error!! Try again");
+          setTimeout(window.location.reload.bind(window.location), 500);
         } else {
           if (data.success === true) console.log(data);
           setSuccessMessage(`Profile ${username} created`);
+          localStorage.clear();
+          setTimeout(() => window.location.replace("/login"), 1000);
         }
       })
       .catch((error) => console.log(error));
@@ -123,10 +144,27 @@ export const Register = () => {
               specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
             />
           ) : null}
+
+          {error === "" ? null : (
+            <span
+              style={{
+                fontWeight: "bold",
+                fontStyle: "italic",
+              }}
+            >
+              {error}
+            </span>
+          )}
           <p className="errorMessage">{errorMessage}</p>
           <p className="errorMessage">{successMessage}</p>
           <div className="buttonBox">
-            <button className="registerButton"> REGISTER</button>
+            <button
+              className="registerButton"
+              disabled={!username || !email || !password}
+            >
+              {" "}
+              REGISTER
+            </button>
 
             <p>Already have an account? </p>
             <button className="registerLoginButton">

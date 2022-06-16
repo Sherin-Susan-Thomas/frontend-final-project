@@ -28,7 +28,7 @@ export const SideBar = () => {
               <div key={category._id}>
                 <Link to={`/home/?category=${category.name}`}>
                   {" "}
-                  <li>{category.name.toUpperCase()}</li>
+                  <li>{category.name}</li>
                 </Link>
               </div>
             );

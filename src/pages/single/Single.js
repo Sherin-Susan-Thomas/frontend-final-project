@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { SideBar } from "components/sidebar/Sidebar";
 import { SinglePost } from "components/singlepost/SinglePost";
 
 import "./single.css";
@@ -8,7 +8,10 @@ import "./single.css";
 export const Single = () => {
   return (
     <div className="single">
-      <SideBar />
+      <Link to="/home">
+        <button className="home">Home</button>
+      </Link>
+
       <SinglePost />
     </div>
   );

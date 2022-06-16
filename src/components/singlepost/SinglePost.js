@@ -23,6 +23,8 @@ export const SinglePost = () => {
       );
       console.log(res);
       setPost(res.data);
+      setTitle(res.data.title);
+      setDescription(res.data.description);
     };
     getPost();
   }, [path]);
@@ -53,7 +55,6 @@ export const SinglePost = () => {
   };
   return (
     <div className="singlePost">
-      SINGLE POST
       <div className="singlePostWrapper">
         {post.picture && (
           <img src={post.picture} alt="" className="singlePostImg" />

@@ -16,7 +16,11 @@ export const TopBar = () => {
         </div> */}
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">HOME</li>
+          <Link to="/home">
+            {" "}
+            <li className="topListItem">HOME</li>
+          </Link>
+
           <Link to="/newpost">
             <li className="topListItem">
               NEW POST
@@ -33,12 +37,8 @@ export const TopBar = () => {
         <Link to="/users/:id">
           <h2>{user.username}</h2>{" "}
         </Link>
-        <i className="searchIcon fa-solid fa-magnifying-glass">
-          <span className="searchIcon_input">
-            <input />
-          </span>
-        </i>
-        <button>
+
+        <button className="logout">
           <Link to="/" onClick={() => window.localStorage.clear()}>
             Logout
           </Link>

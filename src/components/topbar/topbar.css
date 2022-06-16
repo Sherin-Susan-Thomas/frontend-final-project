@@ -53,9 +53,7 @@
     cursor: pointer;
 }
 
-.searchIcon {
-    font-size: 18px;
-    color: #FF9595;
-    cursor: pointer;
-    margin-left: 15px;
+.logout{
+    width: 100px;
+    margin: 20px;
 }

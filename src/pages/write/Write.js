@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const Write = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
+  const [categories, setcategories] = useState("");
   const [image, setImage] = useState("");
   const [url, setUrl] = useState("");
   const user = localStorage.getItem("user");
@@ -40,6 +40,7 @@ export const Write = () => {
       body: JSON.stringify({
         title,
         description,
+        categories,
         picture: url,
         username: user,
       }),
@@ -77,7 +78,7 @@ export const Write = () => {
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <button onClick={() => postDetails()}>Update Picture</button>
+            <button onClick={() => postDetails()}>Add Picture</button>
 
             <input
               className="writeInput"
@@ -88,6 +89,22 @@ export const Write = () => {
               required
               onChange={(e) => setTitle(e.target.value)}
             />
+            <label></label>
+
+            <select
+              name="pets"
+              id="pet-select"
+              value={categories}
+              onChange={(e) => setcategories(e.target.value)}
+            >
+              <option value="">Choose a category</option>
+              <option value="Countries">Countries</option>
+              <option value="Europe">Europe</option>
+              <option value="Cities">Cities</option>
+              <option value="Wonders of the World">Wonders of the World</option>
+              <option value="Asia">Asia</option>
+              <option value="America">America</option>
+            </select>
           </div>
           <div className="writeFormGroup">
             <textarea

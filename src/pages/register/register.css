@@ -115,16 +115,38 @@ padding:10px;
 
   /*Media queries*/
 
-  @media screen and (min-width: 600px) and (max-width: 800px) {
+  @media screen and (min-width: 600px) and (max-width: 1023) {
       body{
           margin: 70px;
       }
-
       .RegisterTitle{
-          font-size: 88pt;
-          margin-bottom: -10px;
+        font-size: 70pt;
+        margin-bottom: -25px;
+        margin-top: -30px;
+      }
+      .registerBox {
+        max-width: 75%;
       }
       .registerButton, .registerLoginButton {
        max-width: 50%;      
       }
+      .buttonBox {
+        text-align: left;
+        width: 500px;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .RegisterTitle{
+      font-size: 150pt;
+    }
+    .registerBox {
+      background: none;
+      margin-top: -20%;
+      margin-left: 40%;
+      width: 500px;
+      padding: 40px;
+  }
+
+
   }

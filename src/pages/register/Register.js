@@ -62,9 +62,9 @@ export const Register = () => {
         minSymbols: 1,
       })
     ) {
-      setError("Is Strong Password");
+      setError("Strong Password");
     } else {
-      setError("Is Not Strong Password");
+      setError("Not a Strong Password");
     }
   };
   const handleOnChange = (e) => {
@@ -103,27 +103,35 @@ export const Register = () => {
       <span className="RegisterTitle">MEMORY</span>
       <span className="RegisterTitle">BOX.</span>
       <div className="registerBox">
-        <p class="z-depth-5"></p>
+        
         <form className="RegisterForm" onSubmit={handleOnSubmit}>
-          <label htmlFor="username">Username</label>
-          <input
+
+          <div className="inputDiv">
+          <label htmlFor="username">username</label>
+          <input className="registerInput"
             type="text"
             required
             placeholder="Enter your username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="email">Email</label>
-          <input
+          </div>
+
+          <div className="inputDiv">
+          <label htmlFor="email">email</label>
+          <input className="registerInput"
             type="email"
             required
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
+          </div>
+
+          <div className="inputDiv">
+          <label htmlFor="password">password</label>
           <span>
-            <input
+            <input className="registerInput"
               type={passwordShown ? "text" : "password"}
               required
               placeholder="Enter your password"
@@ -135,6 +143,7 @@ export const Register = () => {
             />
             {!passwordShown ? showicon : hideicon}
           </span>
+          </div>
 
           {pwdRequiste ? (
             <PWDRequisite

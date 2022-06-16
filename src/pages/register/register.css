@@ -1,130 +1,130 @@
 body{
-    background-image: url(https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-    background-size: cover;
-    background-position: center;
-    font-family: 'Jost', sans-seri;
-    margin: 30px;
+  background-image: url(https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Jost', sans-seri;
+  margin: 30px;
 }
 
 .Register{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .RegisterTitle{
-    font-size: 58pt;
-    color: #e6f4e9;
-    margin-bottom: -20px;
+font-size: 54pt;
+  color: #F6D186;
+  margin-bottom: -30px;
 }
 .invalid{
-  color:red
+color:red
 }
 .valid{
-  color:green
+color:green
 }
 .registerBox{ 
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 0.9;
-    margin-top: 35px;
-    padding: 30px;
-    border-radius: 15pt;
+background-color: #FCF7BB;
+opacity: 0.85;
+margin-top: 16px;
+padding: 25px;
+border-top-right-radius: 60px;
+border-bottom-left-radius: 20px;
 }
 
 .RegisterForm{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonBox{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 240px;
 }
 
-    .registerButton, .registerLoginButton {
-        font-family: 'Jost', sans-seri;
-        font-size: 20px;
-        font-weight: 700;
-      align-items: center;
-      appearance: none;
-      
-      border-radius: 25px;
-      border-style: none;
-      box-sizing: border-box;
-      color: #342B38;
-      cursor: pointer;
-      display: inline-flex;
-      height: 50px;
-      justify-content: center;
-      letter-spacing: .40px;
-      max-width: 90%px;
-      overflow: visible;
-      padding: 2px 24px;
-      position: relative;
-      text-align: center;
-      text-transform: none;
-      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      width: auto;
-      will-change: transform,opacity;
-      z-index: 0;
-    }
-
-  
-
-
-    
-    button-17:hover {
-      background: #F6F9FE;
-      color: #174ea6;
-    }
-    
-    button-17:active {
-      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-      outline: none;
-    }
-    
-    button-17:focus {
-      outline: none;
-      border: 2px solid #4285f4;
-    }
-    
-    button:not(:disabled) {
-      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-    }
-    
-    button:not(:disabled):hover {
-      box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-    }
-    
-    button:not(:disabled):focus {
-      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-    }
-    
-    button:not(:disabled):active {
-      box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-    }
-    
-    button:disabled {
-      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-    }
-
-    /*Media queries*/
-
-    @media screen and (min-width: 600px) and (max-width: 800px) {
-        body{
-            margin: 70px;
-        }
+  .registerButton, .registerLoginButton {
+    font-family: 'Jost', sans-seri;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    appearance: none;
+    background-color: #F19292;
+    border-radius: 20px;
+    border-style: none;
+    border-color: #F6D186;
+    box-sizing: border-box;
+    color: #342B38;
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    letter-spacing: 2.4px;
+    width: 50%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
 
 
-        .RegisterTitle{
-            font-size: 88pt;
-            margin-bottom: -10px;
-        }
-        .registerButton, .registerLoginButton {
-         max-width: 50%;      
-        }
-    }
+  .registerButton:hover {
+    background: #F6D186;
+  }
+
+  .registerLoginButton:hover {
+    background: #CBE2B0;
+  }
+
+  /*INPUT */
+
+  .inputDiv {
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+  }
+
+  .registerInput{
+    border: none;
+  background-color: #FCF7BB;
+  color: #F19292;
+  font-family: 'Jost', sans-seri;
+  font-size: 17pt;
+  height: 30px;
+  width: 250px;
+  padding: 2px;
+  }
+
+  .errorMessage{
+    font-size: 10pt;
+    padding:-2px;
+  }
+
+span{
+padding:10px;
+}
+
+  /*Media queries*/
+
+  @media screen and (min-width: 600px) and (max-width: 800px) {
+      body{
+          margin: 70px;
+      }
+
+      .RegisterTitle{
+          font-size: 88pt;
+          margin-bottom: -10px;
+      }
+      .registerButton, .registerLoginButton {
+       max-width: 50%;      
+      }
+  }

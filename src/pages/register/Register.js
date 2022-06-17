@@ -62,9 +62,9 @@ export const Register = () => {
         minSymbols: 1,
       })
     ) {
-      setError("Is Strong Password");
+      setError("Strong Password");
     } else {
-      setError("Is Not Strong Password");
+      setError("Not a Strong Password");
     }
   };
   const handleOnChange = (e) => {
@@ -103,30 +103,41 @@ export const Register = () => {
   };
   return (
     <div className="Register">
+      <div className="titleBox">
       <span className="RegisterTitle">MEMORY</span>
       <span className="RegisterTitle">BOX.</span>
+      </div>
       <div className="registerBox">
-        <p class="z-depth-5"></p>
-        <form className="RegisterForm" onSubmit={handleOnSubmit}>
-          <label htmlFor="username">Username</label>
-          <input
+        
+        <div className="RegisterForm" >
+        <form onSubmit={handleOnSubmit}>
+
+          <div className="inputDiv">
+          <label className="userName" htmlFor="username">username</label>
+          <input className="registerInput"
             type="text"
             required
             placeholder="Enter your username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="email">Email</label>
-          <input
+          </div>
+
+          <div className="inputDiv">
+          <label className="userName" htmlFor="email">email</label>
+          <input className="registerInput"
             type="email"
             required
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
-          <span>
-            <input
+          </div>
+
+          <div className="inputDiv">
+          <label className="userName" htmlFor="password">password</label>
+         
+            <input className="registerInput"
               type={passwordShown ? "text" : "password"}
               required
               placeholder="Enter your password"
@@ -136,8 +147,10 @@ export const Register = () => {
               onBlur={handleOnBlur}
               onKeyUp={handleOnKeyUp}
             />
+             <span>
             {!passwordShown ? showicon : hideicon}
           </span>
+          </div>
 
           {pwdRequiste ? (
             <PWDRequisite
@@ -160,6 +173,8 @@ export const Register = () => {
           )}
           <p className="errorMessage">{errorMessage}</p>
           <p className="errorMessage">{successMessage}</p>
+          </form>
+          </div>
           <div className="buttonBox">
             <button
               className="registerButton"
@@ -174,7 +189,7 @@ export const Register = () => {
               <Link to="/login">LOGIN</Link>
             </button>
           </div>
-        </form>
+      
       </div>
     </div>
   );

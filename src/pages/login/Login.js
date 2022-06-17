@@ -15,18 +15,25 @@ export const Login = () => {
   };
   const showicon = (
     <i
-      class="fas fa-eye-slash fa-sm"
+      className="fas fa-eye-slash fa-sm"
       aria-hidden="true"
       onClick={togglePassword}
     ></i>
   );
 
   const hideicon = (
-    <i class="far fa-eye fa-sm" aria-hidden="true" onClick={togglePassword}></i>
+    <i
+      className="far fa-eye fa-sm"
+      aria-hidden="true"
+      onClick={togglePassword}
+    ></i>
   );
   const options = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({ username: username, password: password }),
   };
   useEffect(() => {

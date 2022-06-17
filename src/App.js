@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Single } from "pages/single/Single";
 import { Write } from "pages/write/Write";
 import { Profile } from "pages/profile/Profile";
+import { Userdetails } from "pages/profile/userdetails";
 
 export const App = () => {
   return (
@@ -18,7 +19,8 @@ export const App = () => {
           <Route path="/" element={<Register />} />
           <Route path="/newpost" element={<Write />} />
           <Route path="/post/:id" element={<Single />} />
-          <Route path="/users/:id" element={<Profile />} />
+          <Route path="/users/pic" element={<Profile />} />
+          <Route path="/users/:id" element={<Userdetails />} />
         </Routes>
       </BrowserRouter>
     </>

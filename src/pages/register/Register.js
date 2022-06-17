@@ -100,14 +100,17 @@ export const Register = () => {
   };
   return (
     <div className="Register">
+      <div className="titleBox">
       <span className="RegisterTitle">MEMORY</span>
       <span className="RegisterTitle">BOX.</span>
+      </div>
       <div className="registerBox">
         
-        <form className="RegisterForm" onSubmit={handleOnSubmit}>
+        <div className="RegisterForm" >
+        <form onSubmit={handleOnSubmit}>
 
           <div className="inputDiv">
-          <label htmlFor="username">username</label>
+          <label className="userName" htmlFor="username">username</label>
           <input className="registerInput"
             type="text"
             required
@@ -118,7 +121,7 @@ export const Register = () => {
           </div>
 
           <div className="inputDiv">
-          <label htmlFor="email">email</label>
+          <label className="userName" htmlFor="email">email</label>
           <input className="registerInput"
             type="email"
             required
@@ -129,8 +132,8 @@ export const Register = () => {
           </div>
 
           <div className="inputDiv">
-          <label htmlFor="password">password</label>
-          <span>
+          <label className="userName" htmlFor="password">password</label>
+         
             <input className="registerInput"
               type={passwordShown ? "text" : "password"}
               required
@@ -141,6 +144,7 @@ export const Register = () => {
               onBlur={handleOnBlur}
               onKeyUp={handleOnKeyUp}
             />
+             <span>
             {!passwordShown ? showicon : hideicon}
           </span>
           </div>
@@ -166,6 +170,8 @@ export const Register = () => {
           )}
           <p className="errorMessage">{errorMessage}</p>
           <p className="errorMessage">{successMessage}</p>
+          </form>
+          </div>
           <div className="buttonBox">
             <button
               className="registerButton"
@@ -180,7 +186,7 @@ export const Register = () => {
               <Link to="/login">LOGIN</Link>
             </button>
           </div>
-        </form>
+      
       </div>
     </div>
   );

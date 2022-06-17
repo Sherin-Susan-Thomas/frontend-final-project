@@ -6,15 +6,22 @@ body{
   margin: 30px;
 }
 
+.titleBox{
+  display:flex;
+  flex-direction: column;
+}
+
+
 .Register{
   display: flex;
   flex-direction: column;
 }
 
 .RegisterTitle{
-font-size: 54pt;
-  color: #F6D186;
-  margin-bottom: -30px;
+  font-size: 54pt;
+  color: #C6F1D6;
+  margin-bottom: -40px;
+  margin-top: -20px;
 }
 .invalid{
 color:red
@@ -23,12 +30,14 @@ color:red
 color:green
 }
 .registerBox{ 
-background-color: #FCF7BB;
-opacity: 0.85;
-margin-top: 16px;
-padding: 25px;
-border-top-right-radius: 60px;
-border-bottom-left-radius: 20px;
+  background-color: #C6F1D6;
+  opacity: 0.85;
+  margin-top: 16px;
+  padding: 20px;
+  min-width: 280px;
+  max-width: 60%;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 20px;
 }
 
 .RegisterForm{
@@ -50,7 +59,7 @@ border-bottom-left-radius: 20px;
     font-weight: 600;
     align-items: center;
     appearance: none;
-    background-color: #F19292;
+    background-color: #FF8080;
     border-radius: 20px;
     border-style: none;
     border-color: #F6D186;
@@ -78,11 +87,11 @@ border-bottom-left-radius: 20px;
 
 
   .registerButton:hover {
-    background: #F6D186;
+    background: #FFBA92;
   }
 
   .registerLoginButton:hover {
-    background: #CBE2B0;
+    background: #FFBA92;
   }
 
   /*INPUT */
@@ -93,15 +102,24 @@ border-bottom-left-radius: 20px;
     padding:10px;
   }
 
+  .userName{
+    font-size: 14pt;
+    color: #FF8080;
+  }
+
   .registerInput{
     border: none;
-  background-color: #FCF7BB;
+  background-color: transparent;
   color: #F19292;
   font-family: 'Jost', sans-seri;
-  font-size: 17pt;
+  font-size: 16pt;
   height: 30px;
   width: 250px;
   padding: 2px;
+  }
+
+  .registerInput::placeholder{
+    color:#342B38;
   }
 
   .errorMessage{
@@ -137,16 +155,33 @@ padding:10px;
   }
 
   @media screen and (min-width: 1024px){
+    .Register {
+      flex-direction: row;
+      align-items: flex-start;
+      width:fit-content;
+  }
+
     .RegisterTitle{
-      font-size: 150pt;
+      font-size: 110pt;
     }
     .registerBox {
       background: none;
-      margin-top: -20%;
-      margin-left: 40%;
-      width: 500px;
-      padding: 40px;
+      width: 300px;
+      padding: 30px;
   }
-
-
+.userName{
+  font-size: 24pt;
+  font-weight:700;
+  color:#C6F1D6;
+}
+.registerInput {
+  color: #F19292;
+  font-size: 24pt;
+  height: 30px;
+  width:fit-content;
+}
+.registerInput::placeholder{
+  color:#FFBA92;
+}
+ 
   }

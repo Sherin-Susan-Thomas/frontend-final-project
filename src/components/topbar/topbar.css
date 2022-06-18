@@ -1,7 +1,8 @@
 .topBar {
   height: 100px;
   width: 100%;
-  background-color: #ffff;
+  background-color:#FFBA92;
+  color:#C6F1D6;
   position: sticky;
   top: 0;
   display: flex;
@@ -20,7 +21,7 @@
 }
 .topIcon {
   font-size: 20px;
-  margin-right: 10px;
+
   color: #c3bbc6;
   cursor: pointer;
 }
@@ -49,7 +50,7 @@
 .topListItem {
   margin-right: 20px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   cursor: pointer;
 }
 

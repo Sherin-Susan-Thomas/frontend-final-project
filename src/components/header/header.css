@@ -1,5 +1,6 @@
 .header{
-    margin-top: 60px;
+    background-color: #C6F1D6;
+    color: #FF8080;
 }
 
 .headerTitles{
@@ -7,18 +8,16 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Jost', sans-serif;
-    color: black;
-    background-color: rgb(203, 210, 208);
+   
 }
 
 .headerTitleSm{
-    top: 18%;
-    font-size: 20px;
+    margin-top: -40px;
+    font-size: 26pt;
 }
 
 .headerTitleLg {
-    top: 20%;
-    font-size: 60px;;
+    font-size: 64pt;;
 }
 
 .headerImage {

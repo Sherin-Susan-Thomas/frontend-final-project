@@ -1,7 +1,5 @@
 .posts{
     display: flex;
     flex-direction: column;
-flex:1;
-    background-color:rgb(235, 224, 217);
-   
+flex:1;   
 }

@@ -25,9 +25,6 @@ export const TopBar = () => {
           <Link to="/newpost">
             <li className="topListItem">
               NEW POST
-              <span role="img" aria-label="image">
-                ✍️
-              </span>
             </li>
           </Link>
           <li className="topListItem">FAVOURITES</li>

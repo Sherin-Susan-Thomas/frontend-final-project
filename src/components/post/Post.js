@@ -5,32 +5,56 @@ import { Link } from "react-router-dom";
 export const Post = ({ post }) => {
   return (
     <div className="post">
-      <h1>
+      
+      <div className="postHeader">
         <span className="postTitle">{post.title}</span>
-      </h1>
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
+        </span>
+       
+      {post.picture && <img className="postImg" src={post.picture} alt="" />}
+      </div>
 
-      <p className="postAuthor">
-        Postedby:
+
+      <div className="postInfo">
+      <p className="postAuthor"><strong> Posted by:</strong>
+       
         <Link to={`/home/?user=${post.username}`} className="link">
           {post.username}
         </Link>
       </p>
-      <h4>
-        Tags: <span className="hash">#{post.categories[0]}</span>
-      </h4>
-      {post.picture && <img className="postImg" src={post.picture} alt="" />}
-      <div className="postInfo">
-        <div className="postDetails"></div>
 
-        <br />
-        <span className="postDate">
-          {new Date(post.createdAt).toDateString()}
-        </span>
+      
+    
+
       </div>
-      <div className="postDesc">{post.description}</div>
+   
+
+        <div className="postDesc">{post.description}</div>
       <Link to={`/post/${post._id}`} className="link">
         <button>Read More</button> <br />
       </Link>
+      
+
+      <div className="postDetails">
+      
+
+      <h4>
+        Tags: <span className="hash">#{post.categories[0]}</span>
+      </h4>
+
+    
+       
+
+        
+
+      
+    
+
+    
+       
+      </div>
+    
 
       <button className="likeButton">
         <span className="hearts" role="img" aria-label="heart image">

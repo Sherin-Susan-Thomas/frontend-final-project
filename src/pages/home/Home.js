@@ -4,7 +4,7 @@ import axios from "axios";
 import { Header } from "components/header/Header";
 import { TopBar } from "components/topbar/TopBar";
 import "./home.css";
-import { SideBar } from "components/sidebar/Sidebar";
+
 import { Posts } from "components/posts/posts";
 import { useLocation } from "react-router-dom";
 
@@ -26,12 +26,13 @@ export const HomePage = () => {
 
   return (
     <>
-      <div className="home">
+   
         <TopBar />
-        <Header />
-
-        <Posts posts={posts} />
-        <SideBar />
+      <Header />
+       
+  
+        <div className="home">
+      <Posts posts={posts} />
       </div>
     </>
   );

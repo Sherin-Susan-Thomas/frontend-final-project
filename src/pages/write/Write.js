@@ -65,7 +65,7 @@ export const Write = () => {
         <button>Back to homepage</button>
       </Link>
       <div className="write">
-        <p>Author :{user}</p>
+        
         <img className="writeImge" src={url} alt="" />
         <form className="writeForm" onSubmit={(e) => postDetails(e)}>
           <div className="writeFormGroup">
@@ -110,7 +110,7 @@ export const Write = () => {
           </div>
           <div className="writeFormGroup">
             <textarea
-              className="writeInput writeText"
+              className="writeText"
               placeholder="Tell your story..."
               type="textarea"
               rows="20"
@@ -120,6 +120,7 @@ export const Write = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
+            <p>Author: {user}</p>
           </div>
           <button className="writeSubmit" type="submit">
             Post

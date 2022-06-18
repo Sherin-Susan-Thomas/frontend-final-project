@@ -1,16 +1,20 @@
 import React from "react";
 import "./header.css";
+import { SideBar } from "components/sidebar/Sidebar";
 
 export const Header = () => {
   return (
     <div className="header">
+
       <div className="headerTitles">
-        <span className="headerTitleLg">MEMORY BOX.</span>
+        <p className="headerTitleLg">MEMORY BOX.</p>
        
-        <span className="headerTitleSm"><i>Save and share your moments with other users</i>
-          
-        </span>
+        <p className="headerTitleSm"><i>Save and share your moments with other users</i>
+        </p>
+      
       </div>
+      <SideBar />
+   
     </div>
   );
 };

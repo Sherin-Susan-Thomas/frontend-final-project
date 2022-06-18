@@ -8,20 +8,18 @@ import "./register.css";
 export const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordShown, setPasswordShown] = useState(false);
   const [pwdRequiste, setPWDRquisite] = useState(false);
-  const [error, setError] = useState("");
-
   const [checks, setChecks] = useState({
     capsLetterCheck: false,
     numberCheck: false,
     pwdLengthCheck: false,
     specialCharCheck: false,
   });
+  const [passwordShown, setPasswordShown] = useState(false);
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-
+  const [error, setError] = useState("");
   const handleOnFocus = () => {
     setPWDRquisite(true);
   };
@@ -42,16 +40,6 @@ export const Register = () => {
       specialCharCheck,
     });
   };
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  };
-  const showicon = (
-    <i class="fas fa-eye-slash" aria-hidden="true" onClick={togglePassword}></i>
-  );
-
-  const hideicon = (
-    <i class="far fa-eye" aria-hidden="true" onClick={togglePassword}></i>
-  );
   const validate = (value) => {
     if (
       validator.isStrongPassword(value, {
@@ -62,9 +50,9 @@ export const Register = () => {
         minSymbols: 1,
       })
     ) {
-      setError("Strong Password");
+      setError("Is Strong Password");
     } else {
-      setError("Not a Strong Password");
+      setError("Is Not Strong Password");
     }
   };
   const handleOnChange = (e) => {
@@ -73,9 +61,7 @@ export const Register = () => {
   };
   const options = {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       username: username,
       email: email,
@@ -83,116 +69,102 @@ export const Register = () => {
     }),
   };
 
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
+  const showicon = (
+    <i class="fas fa-eye-slash" aria-hidden="true" onClick={togglePassword}></i>
+  );
+
+  const hideicon = (
+    <i class="far fa-eye" aria-hidden="true" onClick={togglePassword}></i>
+  );
   const handleOnSubmit = (event) => {
     event.preventDefault();
     fetch(`${API_URL}/auth/register`, options)
       .then((response) => response.json())
       .then((data) => {
         if (data.success === false) {
-          setErrorMessage("Error!! Try again");
-          setTimeout(window.location.reload.bind(window.location), 500);
+          setErrorMessage("try again");
         } else {
           if (data.success === true) console.log(data);
           setSuccessMessage(`Profile ${username} created`);
-          localStorage.clear();
-          setTimeout(() => window.location.replace("/login"), 1000);
+          window.location.replace("/login");
         }
       })
       .catch((error) => console.log(error));
   };
   return (
     <div className="Register">
-      <div className="titleBox">
-        <span className="RegisterTitle">MEMORY</span>
-        <span className="RegisterTitle">BOX.</span>
-      </div>
+      <span className="RegisterTitle">MEMORY</span>
+      <span className="RegisterTitle">BOX.</span>
       <div className="registerBox">
-        <div className="RegisterForm">
-          <form onSubmit={handleOnSubmit}>
-            <div className="inputDiv">
-              <label className="userName" htmlFor="username">
-                username
-              </label>
-              <input
-                className="registerInput"
-                type="text"
-                required
-                placeholder="Enter your username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
+        <p className="z-depth-5"></p>
 
-            <div className="inputDiv">
-              <label className="userName" htmlFor="email">
-                email
-              </label>
-              <input
-                className="registerInput"
-                type="email"
-                required
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
+        <form className="RegisterForm" onSubmit={(e) => handleOnSubmit(e)}>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            placeholder="Enter your username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label htmlFor="picture">PP</label>
 
-            <div className="inputDiv">
-              <label className="userName" htmlFor="password">
-                password
-              </label>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type={passwordShown ? "text" : "password"}
+            placeholder="Enter your password"
+            value={password}
+            onChange={handleOnChange}
+            onFocus={handleOnFocus}
+            onBlur={handleOnBlur}
+            onKeyUp={handleOnKeyUp}
+          />
+          {pwdRequiste ? (
+            <PWDRequisite
+              capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+              numberFlag={checks.numberCheck ? "valid" : "invalid"}
+              pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+              specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
+            />
+          ) : null}
+          {!passwordShown ? showicon : hideicon}
+          {error === "" ? null : (
+            <span
+              style={{
+                fontWeight: "bold",
+                fontStyle: "italic",
+              }}
+            >
+              {error}
+            </span>
+          )}
+          <p className="errorMessage">{errorMessage}</p>
+          <p className="errorMessage">{successMessage}</p>
 
-              <input
-                className="registerInput"
-                type={passwordShown ? "text" : "password"}
-                required
-                placeholder="Enter your password"
-                value={password}
-                onChange={handleOnChange}
-                onFocus={handleOnFocus}
-                onBlur={handleOnBlur}
-                onKeyUp={handleOnKeyUp}
-              />
-              <span>{!passwordShown ? showicon : hideicon}</span>
-            </div>
+          <div className="buttonBox">
+            <button
+              className="registerButton"
+              disabled={!username || !email || !password}
+            >
+              {" "}
+              REGISTER
+            </button>
 
-            {pwdRequiste ? (
-              <PWDRequisite
-                capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
-                numberFlag={checks.numberCheck ? "valid" : "invalid"}
-                pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
-                specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
-              />
-            ) : null}
-
-            {error === "" ? null : (
-              <span
-                style={{
-                  fontWeight: "bold",
-                  fontStyle: "italic",
-                }}
-              >
-                {error}
-              </span>
-            )}
-            <p className="errorMessage">{errorMessage}</p>
-            <p className="errorMessage">{successMessage}</p>
-          </form>
-        </div>
-        <div className="buttonBox">
-          <button
-            className="registerButton"
-            disabled={!username || !email || !password}
-          >
-            {" "}
-            REGISTER
-          </button>
-
-          <p>Already have an account? </p>
-          <button className="registerLoginButton">
-            <Link to="/login">LOGIN</Link>
-          </button>
-        </div>
+            <p>Already have an account? </p>
+            <button className="registerLoginButton">
+              <Link to="/login">LOGIN</Link>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

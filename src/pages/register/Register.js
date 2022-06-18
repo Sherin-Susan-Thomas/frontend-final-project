@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { API_URL } from "components/utils/url";
 import PWDRequisite from "./PWDRequisite";
 import validator from "validator";
 import "./register.css";
 
 export const Register = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [pwdRequiste, setPWDRquisite] = useState(false);
@@ -89,7 +91,7 @@ export const Register = () => {
         } else {
           if (data.success === true) console.log(data);
           setSuccessMessage(`Profile ${username} created`);
-          window.location.replace("/login");
+          navigate("/login");
         }
       })
       .catch((error) => console.log(error));

@@ -17,7 +17,6 @@ export const Userdetails = () => {
       fetch("https://final-sprint.herokuapp.com/api/users/" + path, {
         method: "GET",
         headers: {
-          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
         },
       })

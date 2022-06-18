@@ -74,7 +74,6 @@ export const Register = () => {
   const options = {
     method: "POST",
     headers: {
-      "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -104,92 +103,96 @@ export const Register = () => {
   return (
     <div className="Register">
       <div className="titleBox">
-      <span className="RegisterTitle">MEMORY</span>
-      <span className="RegisterTitle">BOX.</span>
+        <span className="RegisterTitle">MEMORY</span>
+        <span className="RegisterTitle">BOX.</span>
       </div>
       <div className="registerBox">
-        
-        <div className="RegisterForm" >
-        <form onSubmit={handleOnSubmit}>
+        <div className="RegisterForm">
+          <form onSubmit={handleOnSubmit}>
+            <div className="inputDiv">
+              <label className="userName" htmlFor="username">
+                username
+              </label>
+              <input
+                className="registerInput"
+                type="text"
+                required
+                placeholder="Enter your username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
 
-          <div className="inputDiv">
-          <label className="userName" htmlFor="username">username</label>
-          <input className="registerInput"
-            type="text"
-            required
-            placeholder="Enter your username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          </div>
+            <div className="inputDiv">
+              <label className="userName" htmlFor="email">
+                email
+              </label>
+              <input
+                className="registerInput"
+                type="email"
+                required
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-          <div className="inputDiv">
-          <label className="userName" htmlFor="email">email</label>
-          <input className="registerInput"
-            type="email"
-            required
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          </div>
+            <div className="inputDiv">
+              <label className="userName" htmlFor="password">
+                password
+              </label>
 
-          <div className="inputDiv">
-          <label className="userName" htmlFor="password">password</label>
-         
-            <input className="registerInput"
-              type={passwordShown ? "text" : "password"}
-              required
-              placeholder="Enter your password"
-              value={password}
-              onChange={handleOnChange}
-              onFocus={handleOnFocus}
-              onBlur={handleOnBlur}
-              onKeyUp={handleOnKeyUp}
-            />
-             <span>
-            {!passwordShown ? showicon : hideicon}
-          </span>
-          </div>
+              <input
+                className="registerInput"
+                type={passwordShown ? "text" : "password"}
+                required
+                placeholder="Enter your password"
+                value={password}
+                onChange={handleOnChange}
+                onFocus={handleOnFocus}
+                onBlur={handleOnBlur}
+                onKeyUp={handleOnKeyUp}
+              />
+              <span>{!passwordShown ? showicon : hideicon}</span>
+            </div>
 
-          {pwdRequiste ? (
-            <PWDRequisite
-              capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
-              numberFlag={checks.numberCheck ? "valid" : "invalid"}
-              pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
-              specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
-            />
-          ) : null}
+            {pwdRequiste ? (
+              <PWDRequisite
+                capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+                numberFlag={checks.numberCheck ? "valid" : "invalid"}
+                pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+                specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
+              />
+            ) : null}
 
-          {error === "" ? null : (
-            <span
-              style={{
-                fontWeight: "bold",
-                fontStyle: "italic",
-              }}
-            >
-              {error}
-            </span>
-          )}
-          <p className="errorMessage">{errorMessage}</p>
-          <p className="errorMessage">{successMessage}</p>
+            {error === "" ? null : (
+              <span
+                style={{
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                }}
+              >
+                {error}
+              </span>
+            )}
+            <p className="errorMessage">{errorMessage}</p>
+            <p className="errorMessage">{successMessage}</p>
           </form>
-          </div>
-          <div className="buttonBox">
-            <button
-              className="registerButton"
-              disabled={!username || !email || !password}
-            >
-              {" "}
-              REGISTER
-            </button>
+        </div>
+        <div className="buttonBox">
+          <button
+            className="registerButton"
+            disabled={!username || !email || !password}
+          >
+            {" "}
+            REGISTER
+          </button>
 
-            <p>Already have an account? </p>
-            <button className="registerLoginButton">
-              <Link to="/login">LOGIN</Link>
-            </button>
-          </div>
-      
+          <p>Already have an account? </p>
+          <button className="registerLoginButton">
+            <Link to="/login">LOGIN</Link>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -17,8 +17,6 @@ export const Register = () => {
   });
   const [passwordShown, setPasswordShown] = useState(false);
   const [email, setEmail] = useState("");
-  const [image, setImage] = useState("");
-  const [url, setUrl] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [error, setError] = useState("");
@@ -68,27 +66,9 @@ export const Register = () => {
       username: username,
       email: email,
       password: password,
-      profilepicture: url,
     }),
   };
-  const postpicture = () => {
-    const data = new FormData();
-    data.append("file", image);
-    data.append("upload_preset", "final-project");
-    data.append("cloud_name", "dsfrrrml8");
-    fetch("https://api.cloudinary.com/v1_1/dsfrrrml8/image/upload", {
-      method: "POST",
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setUrl(data.url);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
@@ -105,6 +85,7 @@ export const Register = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success === false) {
+          setErrorMessage("try again");
         } else {
           if (data.success === true) console.log(data);
           setSuccessMessage(`Profile ${username} created`);
@@ -119,7 +100,7 @@ export const Register = () => {
       <span className="RegisterTitle">BOX.</span>
       <div className="registerBox">
         <p className="z-depth-5"></p>
-        <img className="writeImge" src={url} alt="" />
+
         <form className="RegisterForm" onSubmit={(e) => handleOnSubmit(e)}>
           <label htmlFor="username">Username</label>
           <input

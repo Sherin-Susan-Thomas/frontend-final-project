@@ -29,6 +29,7 @@ export const HomePage = () => {
       <div className="home">
         <TopBar />
         <Header />
+
         <Posts posts={posts} />
         <SideBar />
       </div>

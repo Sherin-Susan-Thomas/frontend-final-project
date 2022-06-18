@@ -29,6 +29,7 @@ export const Write = () => {
       })
       .catch((err) => {
         console.log(err);
+        console.log(err);
       });
   };
   const postDetails = (e) => {

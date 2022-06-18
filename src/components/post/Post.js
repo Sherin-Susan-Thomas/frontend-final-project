@@ -40,7 +40,7 @@ export const Post = ({ post }) => {
       
 
       <h4>
-        Tags: <span className="hash">#{post.categories[0]}</span>
+      <span className="hash">#{post.categories[0]}</span>
       </h4>
 
     

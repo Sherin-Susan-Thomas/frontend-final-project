@@ -10,7 +10,7 @@ export const Single = () => {
     <div className="single">
     <Link to="/home">
       
-        <button className="home">Home</button>
+        <button className="homeButton">Home</button>
 
       </Link>
       

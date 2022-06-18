@@ -1,4 +1,4 @@
-/* .header{
+.header{
     display: flex;
     flex-direction: row;
     background-color: #C6F1D6;
@@ -29,4 +29,4 @@
     margin-top: 80px;
     object-fit: cover;
 
-} */
+}

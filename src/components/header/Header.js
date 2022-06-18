@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import { SideBar } from "components/sidebar/Sidebar";
+
 
 export const Header = () => {
   return (
@@ -13,7 +13,7 @@ export const Header = () => {
         </p>
       
       </div>
-      <SideBar />
+  
    
     </div>
   );

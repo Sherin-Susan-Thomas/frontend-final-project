@@ -34,6 +34,12 @@ export const TopBar = () => {
         </ul>
       </div>
 
+      <button className="logout">
+          <Link to="/" onClick={() => window.localStorage.clear()}>
+            Logout
+          </Link>
+        </button>
+
       <div className="topRight">
         <div className="userInfo">
         <Link to="/users/pic">
@@ -45,11 +51,7 @@ export const TopBar = () => {
         </div>
      
 
-      <button className="logout">
-          <Link to="/" onClick={() => window.localStorage.clear()}>
-            Logout
-          </Link>
-        </button>
+      
         </div>
 
     </div>

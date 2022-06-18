@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { Header } from "components/header/Header";
 import { TopBar } from "components/topbar/TopBar";
+import { SideBar } from "components/sidebar/Sidebar";
 import "./home.css";
 
 import { Posts } from "components/posts/posts";
@@ -26,10 +27,11 @@ export const HomePage = () => {
 
   return (
     <>
-   
-        <TopBar />
+
+      <TopBar />
       <Header />
-       
+      <SideBar />
+ 
   
         <div className="home">
       <Posts posts={posts} />

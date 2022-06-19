@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:blue ;
+  background-color:#C499BA;
   font-family: "Jost", sans-serif;
 }
 
@@ -15,17 +15,18 @@ code {
 }
 
 button {
+  text-decoration: transparent;
   font-family: 'Jost', sans-seri;
   font-size: 18px;
   font-weight: 600;
   align-items: center;
   appearance: none;
-  background-color: #FF8080;
+  background-color: #FF7396;
   border-radius: 20px;
   border-style: none;
   border-color: #F6D186;
   box-sizing: border-box;
-  color: #342B38;
+  color: #F4E06D;
   cursor: pointer;
   display: inline-flex;
   height: 40px;
@@ -44,4 +45,20 @@ button {
   width: auto;
   will-change: transform,opacity;
   z-index: 0;
+}
+
+
+input{
+  border: none;
+background-color: transparent;
+color: #FF7396;
+font-family: 'Jost', sans-seri;
+font-size: 16pt;
+height: 30px;
+width: 250px;
+padding: 2px;
+}
+
+input::placeholder{
+  color:#342B38;
 }

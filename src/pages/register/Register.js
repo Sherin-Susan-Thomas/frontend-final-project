@@ -95,6 +95,7 @@ export const Register = () => {
       .catch((error) => console.log(error));
   };
   return (
+    
     <div className="Register">
       <span className="RegisterTitle">MEMORY</span>
       <span className="RegisterTitle">BOX.</span>
@@ -102,32 +103,42 @@ export const Register = () => {
         <p className="z-depth-5"></p>
 
         <form className="RegisterForm" onSubmit={(e) => handleOnSubmit(e)}>
-          <label htmlFor="username">Username</label>
+
+        <div className="inputDiv">
+          <label className="registerLabel" htmlFor="username">username</label>
           <input
             type="text"
-            placeholder="Enter your username"
+            placeholder="Enter your username here"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="picture">PP</label>
+          </div>
+   {/*        <label htmlFor="picture">PP</label> */}
 
-          <label htmlFor="email">Email</label>
+<div className="inputDiv">
+<label className="registerLabel" htmlFor="email">email</label>
           <input
             type="text"
-            placeholder="Enter your email"
+            placeholder="Enter your email here"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
+</div>
+
+
+<div className="inputDiv">
+          <label className="registerLabel" htmlFor="password">password</label>
           <input
             type={passwordShown ? "text" : "password"}
-            placeholder="Enter your password"
+            placeholder="Enter your password here"
             value={password}
             onChange={handleOnChange}
             onFocus={handleOnFocus}
             onBlur={handleOnBlur}
             onKeyUp={handleOnKeyUp}
           />
+</div>
+
           {pwdRequiste ? (
             <PWDRequisite
               capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
@@ -147,8 +158,10 @@ export const Register = () => {
               {error}
             </span>
           )}
-          <p className="errorMessage">{errorMessage}</p>
+
+<p className="errorMessage">{errorMessage}</p>
           <p className="errorMessage">{successMessage}</p>
+        
 
           <div className="buttonBox">
             <button
@@ -165,6 +178,7 @@ export const Register = () => {
             </button>
           </div>
         </form>
+        
       </div>
     </div>
   );

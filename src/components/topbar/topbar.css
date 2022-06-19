@@ -11,13 +11,18 @@
 }
 
 .topLeft{
-  flex: 3;
-  padding: 10px;
-  font-size: 12pt;
+  flex: 3 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 15px;
+  margin-left: 30px;
 }
 
 .logout{
-  width:95px;
+  width: 75px;
+  height: 30px;
+  font-size: 10pt;
 }
 
 .topList {
@@ -30,7 +35,7 @@
 }
 
  .topCenter {
-  flex: 6;
+  flex: 3;
 }
 
 .topRight {

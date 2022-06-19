@@ -17,52 +17,41 @@ export const Post = ({ post }) => {
 
 
       <div className="postInfo">
-      <p className="postAuthor"><strong> Posted by:</strong>
+      <p className="postAuthor"><strong> Posted by: </strong>
        
         <Link to={`/home/?user=${post.username}`} className="link">
           {post.username}
         </Link>
       </p>
-
-      
-    
-
       </div>
    
 
         <div className="postDesc">{post.description}</div>
       <Link to={`/post/${post._id}`} className="link">
-        <button>Read More</button> <br />
+        <button className="readMore">Read More</button> <br />
       </Link>
       
 
       <div className="postDetails">
-      
-
+    
       <h4>
       <span className="hash">#{post.categories[0]}</span>
       </h4>
 
-    
-       
-
-        
-
+   
       
-    
-
-    
-       
       </div>
-    
+
+      <div className="likeBox">
 
       <button className="likeButton">
         <span className="hearts" role="img" aria-label="heart image">
           ❤️
         </span>
+      
       </button>
-
       <span className="likes"> x {post.likes}</span>
+      </div>
     </div>
   );
 };

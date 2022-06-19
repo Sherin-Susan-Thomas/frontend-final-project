@@ -1,8 +1,8 @@
 .post{
     max-width: 360px;
-    margin:   10px 25px 25px 10px;
+    margin: 10px 25px 25px 10px;
     background-color: white;
-    padding:20px;
+    padding: 15px;
     border-radius: 5px;
 }
 
@@ -14,11 +14,15 @@
 }
 
 .postTitle{
-    font-size: 38pt;
+    font-size: 32pt;
     color: black;
     text-align: center;
-    margin-bottom: -15px;
+    margin-bottom: -25px;
     font-family: 'Permanent Marker', cursive;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .postImg{
@@ -31,11 +35,14 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 50px;
 }
 .postDetails{
-display: flex;
-flex-direction:row;
-color:#FF8080;
+    display: flex;
+    flex-direction: row;
+    color: #FF8080;
+    margin-top: -15px;
+    margin-left: -10px;
 }
 
 .postDate{
@@ -45,10 +52,35 @@ color:#FF8080;
 .postDesc{
     overflow: hidden;
     text-overflow: ellipsis;
-    display:-webkit-box;
+    display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    margin-top: -15px;
 }
+
+.readMore{
+    text-decoration: none;
+    font-style: italic;
+    font-size: 10pt;
+    height: 25px;
+    background-color: yellow;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
 .hash{
     color: black;
+    font-family: 'Permanent Marker', cursive;
 }
+
+.likeBox{
+    margin-top: -25px;
+    margin-left: -10px;
+}
+
+.likeButton{
+    flex:6;
+    width:30px;
+    background: transparent;
+}
+

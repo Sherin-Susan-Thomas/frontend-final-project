@@ -97,10 +97,13 @@ export const Register = () => {
   return (
     
     <div className="Register">
+      <div className="titleBox">
       <span className="RegisterTitle">MEMORY</span>
       <span className="RegisterTitle">BOX.</span>
+      </div>
+      <p className="z-depth-5"></p>
       <div className="registerBox">
-        <p className="z-depth-5"></p>
+        
 
         <form className="RegisterForm" onSubmit={(e) => handleOnSubmit(e)}>
 

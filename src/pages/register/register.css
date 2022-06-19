@@ -90,7 +90,6 @@ color:green
   .message{
     font-size: 10pt;
     padding:-10px;
-    background-color: yellow;
   }
 
 
@@ -107,6 +106,7 @@ color:green
       }
       .registerBox {
         max-width: 75%;
+       
       }
       .registerButton, .registerLoginButton {
        max-width: 50%;      
@@ -121,21 +121,32 @@ color:green
     .Register {
       flex-direction: row;
       align-items: flex-start;
-      width:fit-content;
+      width: 100%;
+      height: 700px;
+     
+  }
+  
+  .titleBox{
+    flex-direction: column;
   }
 
     .RegisterTitle{
       font-size: 110pt;
+          background: none;
+    width: 300px;
+    margin-left: 85px;
+    margin-top: 1px;
     }
     .registerBox {
-      background: none;
-      width: 300px;
-      padding: 30px;
+    
+      width: 500px;
+      height: 800px;
+    
   }
-.userName{
-  font-size: 24pt;
-  font-weight:700;
-  color:#C6F1D6;
+.registerLabel{
+  font-size: 28pt;
+  font-weight:900;
+  color:#F4E06D;
 }
 .registerInput {
   color: #F19292;
@@ -144,7 +155,9 @@ color:green
   width:fit-content;
 }
 .registerInput::placeholder{
-  color:#FFBA92;
+  font-size: 34pt;
+  font-weight:700;
+  color:#F4E06D;
 }
  
   }

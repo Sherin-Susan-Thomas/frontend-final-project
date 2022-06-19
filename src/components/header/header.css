@@ -1,29 +1,28 @@
-/* .header{
+.header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #C6F1D6;
     color: #FF8080;
-    max-height: 90px;
+    max-height: 70px;
+    text-align: center;
 }
 
 .headerTitles{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-} */
+    flex-direction: column;
+} 
 
-
-
-
-
-/* 
-
+.headerTitleLg{
+    margin-top: 5px;
+    font-size: 22pt;
+    font-family: 'Fascinate', cursive;
+}
 
 
 .headerTitleSm{
-    margin-top: -40px;
-    font-size: 24pt;
-    
+    margin-top: -35px;
+    font-size: 12pt;
 }
 
 
@@ -34,4 +33,4 @@
     margin-top: 80px;
     object-fit: cover;
 
-} */
+}

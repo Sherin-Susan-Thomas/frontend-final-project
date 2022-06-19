@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-/* import { Header } from "components/header/Header"; */
+import { Header } from "components/header/Header";
 import { TopBar } from "components/topbar/TopBar";
-/* import { SideBar } from "components/sidebar/Sidebar"; */
+
 import "./home.css";
 
 import { Posts } from "components/posts/posts";
@@ -29,13 +29,16 @@ export const HomePage = () => {
     <>
 
       <TopBar />
-      {/* <Header />
-      <SideBar /> */}
- 
+   <Header />
+  
+
+
   
         <div className="home">
       <Posts posts={posts} />
       </div>
+
+    
     </>
   );
 };

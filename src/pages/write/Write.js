@@ -61,25 +61,28 @@ export const Write = () => {
 
   return (
     <>
+    <div className="backButton">
       <Link to="/home">
         <button>Back to homepage</button>
       </Link>
+      </div>
       <div className="write">
         
         <img className="writeImge" src={url} alt="" />
         <form className="writeForm" onSubmit={(e) => postDetails(e)}>
           <div className="writeFormGroup">
-            <label htmlFor="fileInput">
+            <label htmlFor="fileInput"> 
               <i className="writeIcon fas fa-plus"></i>
             </label>
-            <input
+            <input className="chooseFile"
               id="fileInput"
               type="file"
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <button onClick={() => postpicture()}>Add Picture</button>
-            <br /> <br />
+            <button className="addPicture" onClick={() => postpicture()}>Add Picture</button>
+            
+            <div className="detailsInput">
             <label>Title:</label>
             <input
               className="writeInput"
@@ -90,15 +93,16 @@ export const Write = () => {
               required
               onChange={(e) => setTitle(e.target.value)}
             />
-            <br /> <br />
-            <label>Choose a option:</label>
+  
+            </div>
+            <label>Choose #: </label>
             <select
               name="pets"
               id="pet-select"
               value={categories}
               onChange={(e) => setcategories(e.target.value)}
             >
-              <option value="">Choose a category</option>
+              <option value="">Select hashtag below</option>
               <option value="Countries">Countries</option>
               <option value="Europe">Europe</option>
               <option value="Cities">Cities</option>
@@ -106,7 +110,7 @@ export const Write = () => {
               <option value="Asia">Asia</option>
               <option value="America">America</option>
             </select>
-            <br /> <br />
+      
           </div>
           <div className="writeFormGroup">
             <textarea

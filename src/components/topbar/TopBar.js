@@ -44,8 +44,7 @@ export const TopBar = () => {
       <div className="topCenter">
 
      
-
-      
+ 
         </div>
 
       <div className="topRight">

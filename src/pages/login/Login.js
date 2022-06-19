@@ -62,7 +62,8 @@ export const Login = () => {
 
   return (
     <div className="login">
-      <span className="loginTitle">LOG IN HERE.</span>
+      <span className="loginTitle">MEMORY</span>
+      <span className="loginTitle">BOX.</span>
       <div className="loginBox">
         <form className="loginForm" onSubmit={handleOnSubmit}>
           <label htmlFor="username">Username</label>
@@ -82,12 +83,17 @@ export const Login = () => {
             />
             {!passwordShown ? showicon : hideicon}
           </span>
+
+          <div className="buttonBox2">
           <button className="loginButton">Login</button>
           <p>{errorMessage}</p>
 
+          <p>New user? </p>
           <button className="loginRegisterButton">
-            <Link to="/">New User? Create a new Acoount</Link>{" "}
+            <Link to="/">New Account</Link>{" "}
           </button>
+          
+          </div>
         </form>
       </div>
     </div>

@@ -1,8 +1,8 @@
 .header{
     display: flex;
     flex-direction: column;
-    background-color: #C6F1D6;
-    color: #FF8080;
+    background-color: #F4E06D;
+    color: #FFFFDE;
     max-height: 70px;
     text-align: center;
 }
@@ -16,7 +16,7 @@
 .headerTitleLg{
     margin-top: 5px;
     font-size: 22pt;
-    font-family: 'Fascinate', cursive;
+
 }
 
 

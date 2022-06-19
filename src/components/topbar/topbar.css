@@ -1,29 +1,47 @@
- .topBar{
-   display: flex;
-   flex-direction: row;
-   width: 100%;
-   height: 80px;
-   background-color:#FFBA92;
-   color:#C6F1D6;
-   font-family: "Jost", sans-serif;
+.topBar{
+  display: flex;
+  flex-direction: row;
+  min-width:375px;
   position: sticky;
   top: 0;
- }
+  width: 100%;
+  min-height: 80px;
+  background-color:#FFBA92;
+  color:#C6F1D6;
+}
 
- .topCenter {
+.topLeft{
   flex: 3;
   padding: 10px;
+  font-size: 12pt;
+}
+
+.logout{
+  width:95px;
 }
 
 .topList {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  margin: -5px;
+  padding: 15px;
   list-style: none;
 }
- 
+
+ .topCenter {
+  flex: 6;
+}
+
+.topRight {
+  flex: 3;
+ display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px; 
+}
+
 .topListItem {
   margin-right: 20px;
   font-size: 12pt;
@@ -38,21 +56,12 @@
   object-fit: cover;
 }
 
+
 .profileName{
   font-size: 12pt;
   font-weight: 300;
   margin-left: 10px;
   margin-top: 9px;
-}
-
-
-.topRight {
-  flex: 3 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5px;
 }
 
 .userInfo{
@@ -61,10 +70,22 @@
   flex-direction: column;
 }
 
-.logout {
-  width: 100px;
-  margin: 20px;
-}
+
+/*  
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,42 +102,10 @@
   border: 3 px solid red;
 }
 
-.logout{
-  font-family: 'Jost', sans-seri;
-  font-size: 10pt;
-  font-weight: 600;
-  align-items: center;
-  appearance: none;
-  background-color: #FF8080;
-  border-radius: 20px;
-  border-style: none;
-  border-color: #F6D186;
-  box-sizing: border-box;
-  color: #342B38;
-  cursor: pointer;
-  display: inline-flex;
-  height: 30px;
-  justify-content: center;
-  letter-spacing: 2.4px;
-  width: 50%;
-  overflow: visible;
-  padding: 2px 24px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  will-change: transform,opacity;
-  z-index: 0;
-
-}
 
 
 
-
+ */
 /* 
 .menu-btn_burger{
   width:50px;

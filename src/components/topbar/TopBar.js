@@ -15,11 +15,14 @@ export const TopBar = () => {
   return (
     <div className="topBar">
 
-  {/*     <div className="menu-btn">
-<div className="menu-btn_burger"></div>
-      </div> */}
-    
-      <div className="topCenter">
+
+<div className="topLeft">
+<button className="logout">
+          <Link to="/" onClick={() => window.localStorage.clear()}>
+            Logout
+          </Link>
+        </button>
+  
         <ul className="topList">
           <Link to="/home">
             {" "}
@@ -32,13 +35,18 @@ export const TopBar = () => {
           </Link>
           <li className="topListItem">FAVOURITES</li>
         </ul>
-      </div>
+        </div>
 
-      <button className="logout">
-          <Link to="/" onClick={() => window.localStorage.clear()}>
-            Logout
-          </Link>
-        </button>
+  {/*     <div className="menu-btn">
+<div className="menu-btn_burger"></div>
+      </div> */}
+    
+      <div className="topCenter">
+
+     
+
+      
+        </div>
 
       <div className="topRight">
         <div className="userInfo">

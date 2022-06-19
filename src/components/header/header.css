@@ -1,16 +1,24 @@
-.header{
+/* .header{
     display: flex;
     flex-direction: row;
     background-color: #C6F1D6;
     color: #FF8080;
+    max-height: 90px;
 }
 
 .headerTitles{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-   
-}
+} */
+
+
+
+
+
+/* 
+
+
 
 .headerTitleSm{
     margin-top: -40px;
@@ -18,10 +26,7 @@
     
 }
 
-.headerTitleLg {
-    font-size: 64pt;
-    font-family: 'Fascinate', cursive;
-}
+
 
 .headerImage {
     width: 100%;
@@ -29,4 +34,4 @@
     margin-top: 80px;
     object-fit: cover;
 
-}
+} */

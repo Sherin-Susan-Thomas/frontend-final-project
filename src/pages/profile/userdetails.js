@@ -59,21 +59,21 @@ export const Userdetails = () => {
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settingsPP"></div>
-          <label>Username</label>
-          <input
+          <label className="settingsLabel">Username</label>
+          <input className="settingsInput"
             type="text"
             placeholder={user.username}
             name="name"
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label>Email</label>
+          <label className="settingsLabel">Email</label>
           <input
             type="email"
             placeholder={user.email}
             name="email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label>Password</label>
+          <label className="settingsLabel">Password</label>
           <input
             type="password"
             placeholder="Password"

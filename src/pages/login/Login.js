@@ -66,14 +66,19 @@ export const Login = () => {
       <span className="loginTitle">BOX.</span>
       <div className="loginBox">
         <form className="loginForm" onSubmit={handleOnSubmit}>
-          <label htmlFor="username">Username</label>
+
+          <div className="inputDiv">
+          <label className="registerLabel" htmlFor="username">Username</label>
           <input
             type="text"
             placeholder="Enter your username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
+          </div>
+
+          <div className="inputDiv">
+          <label className="registerLabel" htmlFor="password">Password</label>
           <span>
             <input
               type={passwordShown ? "text" : "password"}
@@ -83,12 +88,14 @@ export const Login = () => {
             />
             {!passwordShown ? showicon : hideicon}
           </span>
-
-          <div className="buttonBox2">
-          <button className="loginButton">Login</button>
+          </div>
           <p>{errorMessage}</p>
+          <div className="buttonBox2">
+        
+          <button className="loginButton">Login</button>
+        
 
-          <p>New user? </p>
+          <span className="question">New user? </span>
           <button className="loginRegisterButton">
             <Link to="/">New Account</Link>{" "}
           </button>

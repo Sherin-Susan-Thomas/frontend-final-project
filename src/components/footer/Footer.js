@@ -1,4 +1,4 @@
-import { SideBar } from "components/sidebar/Sidebar";
+/* import { SideBar } from "components/sidebar/Sidebar";
 import React from "react";
 import "./footer.css";
 
@@ -11,4 +11,4 @@ export const Footer = () => {
        <SideBar />
        </div>
   );
-};
+}; */

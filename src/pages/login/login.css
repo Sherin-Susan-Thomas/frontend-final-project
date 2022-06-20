@@ -16,10 +16,10 @@
     padding: 10px;
 }
 
-.loginBox{ 
+.loginBox{  
     background-color: #FFFFDE;
     opacity: 0.85;
-    margin-top: 16px;
+    margin-top: 30px;
     padding: 20px;
     min-width: 280px;
     max-width: 60%;
@@ -28,17 +28,19 @@
 }
 
 .loginForm{
-    display: flex;
+  display: flex;
     flex-direction: column;
+    margin-top: 15px;
 }
 
 .buttonBox2{
-    display: flex;
-    flex-direction: column;
-    margin-top: 140px;
-    text-align: center;
-    width: 240px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 285px;
+  margin-left: 4%;
+  text-align: center;
+  width: 240px;
+  position: absolute;
   }
 
   .loginRegisterButton{
@@ -52,3 +54,84 @@
     .loginRegisterButton:hover {
       background: #FFBA92;
     }
+
+    .inputDiv {
+      display: flex;
+      flex-direction: column;
+      padding:10px;
+    }
+  
+
+    
+  @media screen and (min-width: 600px) and (max-width: 1023) {
+    body{
+        margin: 70px;
+    }
+    .loginTitle{
+      font-size: 70pt;
+      margin-bottom: -25px;
+      margin-top: -30px;
+    }
+    .loginBox{
+      max-width: 75%;
+    }
+    .loginButton, .loginRegisterButton {
+     max-width: 50%;      
+    }
+    .buttonBox2 {
+      text-align: left;
+      width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .loginBox {
+    background-color: #FFFFDE;
+    opacity: 0.85;
+    margin-top: 16px;
+    padding: 20px;
+    min-width: 280px;
+    max-width: 40%;
+    height: 500px;
+    border-top-right-radius: 60px;
+}
+.registerLabel{
+  font-size: 20pt;
+  font-weight:900;
+  color:#F4E06D;
+}
+.RegisterForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.buttonBox2 {
+display: flex;
+flex-direction: column;
+margin-top: 270px;
+margin-left: 50%;
+text-align: center;
+width: 240px;
+position: absolute;
+}
+.registerLoginButton, .registerButton {
+  font-size: 20pt;
+  height: 55px;
+  border-radius: 30px;
+}
+.loginTitle{
+    font-size: 80pt;
+    margin-bottom: -45px;
+    margin-top: -12px;
+    margin-left: 25px;
+    padding: 10px;
+}
+.question{
+color:#F4E06D;
+font-size: 16pt;
+font-weight: 500;
+margin-top:15px;
+margin-bottom:5px;
+}
+}

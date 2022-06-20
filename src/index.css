@@ -5,10 +5,60 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:white ;
+  background-color:#C499BA;
+  font-family: "Jost", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  text-decoration: transparent;
+  font-family: 'Jost', sans-seri;
+  font-size: 18px;
+  font-weight: 600;
+  align-items: center;
+  appearance: none;
+  background-color: #FF7396;
+  border-radius: 20px;
+  border-style: none;
+  border-color: #F6D186;
+  box-sizing: border-box;
+  color: #F4E06D;
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  letter-spacing: 2.4px;
+  width: 50%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+
+input{
+  border: none;
+background-color: transparent;
+color: #FF7396;
+font-family: 'Jost', sans-seri;
+font-size: 16pt;
+height: 30px;
+width: 250px;
+padding: 2px;
+}
+
+input::placeholder{
+  color:#342B38;
 }

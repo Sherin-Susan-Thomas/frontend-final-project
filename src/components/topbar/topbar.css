@@ -1,12 +1,57 @@
-.topBar {
-  height: 100px;
-  width: 100%;
-  background-color: #ffff;
+.topBar{
+  display: flex;
+  flex-direction: row;
+  min-width:375px;
   position: sticky;
   top: 0;
+  width: 100%;
+  min-height: 80px;
+  background-color:#FFBA92;
+  color:#C6F1D6;
+}
+
+.topLeft{
+  flex: 3 1;
   display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.logout{
+  width: 75px;
+  height: 30px;
+  font-size: 10pt;
+}
+
+.topList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: -5px;
+  padding: 15px;
+  list-style: none;
+}
+
+ .topCenter {
+  flex: 3;
+}
+
+.topRight {
+  flex: 3;
+ display: flex;
+  flex-direction: row;
   align-items: center;
-  font-family: "Jost", sans-serif;
+  justify-content: center;
+  margin-top: 5px; 
+}
+
+.topListItem {
+  margin-right: 20px;
+  font-size: 12pt;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .topImg {
@@ -15,45 +60,101 @@
   border-radius: 50%;
   object-fit: cover;
 }
-.searchIcon_input {
-  padding: 10px;
-}
-.topIcon {
-  font-size: 20px;
-  margin-right: 10px;
-  color: #c3bbc6;
-  cursor: pointer;
+
+
+.profileName{
+  font-size: 12pt;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-top: 9px;
 }
 
-.topLeft,
-.topRight {
-  flex: 3;
+.userInfo{
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+
+/*  
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-btn{
+  position: relative;
+  display:flex;
   justify-content: center;
-}
-
-.topCenter {
-  flex: 3;
-  padding: 10px;
-}
-
-.topList {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.topListItem {
-  margin-right: 20px;
-  font-size: 18px;
-  font-weight: 300;
+  align-items: center;
+  width:80px;
+  height:80px;
   cursor: pointer;
+  transition: all .5s ease-in-out;
+  border: 3 px solid red;
 }
 
-.logout {
-  width: 100px;
-  margin: 20px;
+
+
+
+ */
+/* 
+.menu-btn_burger{
+  width:50px;
+  height:6px;
+  background:blue;
+  border-radius:5px;
+  box-shadow: 0 2px 5px pink;
+  transition: all .5s ease-in-out; 
 }
+
+.menu-btn_burger::before,
+.menu-btn_burger::after{
+content: ' ';
+position:absolute;
+width:50px;
+  height:6px;
+  background:blue;
+  border-radius:5px;
+  box-shadow: 0 2px 5px pink;
+  transition: all .5s ease-in-out; 
+}
+/* 
+.menu-btn_burger::before{
+  transform: translateY(-16px);  
+}
+
+.menu-btn_burger::after{
+  transform: translateY(16px);  
+}
+ */
+
+
+
+/* 
+
+
+
+
+
+
+
+
+
+
+ */
+
+ 

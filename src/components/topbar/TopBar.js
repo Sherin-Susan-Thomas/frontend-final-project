@@ -7,46 +7,60 @@ export const TopBar = () => {
 
   const id = user._id;
   console.log("id", id);
+
+
+
+
+
   return (
     <div className="topBar">
-      {/* <div className="topLeft">
-        <i className="topIcon fa-brands fa-facebook-f"></i>
-        <i className="topIcon fa-brands fa-instagram"></i>
-        <i className="topIcon fa-brands fa-github"></i>
-        <i className="topIcon fa-solid fa-at"></i>
-        </div> */}
-      <div className="topCenter">
+
+
+<div className="topLeft">
+<button className="logout">
+          <Link to="/" onClick={() => window.localStorage.clear()}>
+            Logout
+          </Link>
+        </button>
+  
         <ul className="topList">
           <Link to="/home">
             {" "}
             <li className="topListItem">HOME</li>
           </Link>
-
           <Link to="/newpost">
             <li className="topListItem">
               NEW POST
-              <span role="img" aria-label="image">
-                ✍️
-              </span>
             </li>
           </Link>
           <li className="topListItem">FAVOURITES</li>
         </ul>
-      </div>
+        </div>
+
+  {/*     <div className="menu-btn">
+<div className="menu-btn_burger"></div>
+      </div> */}
+    
+      <div className="topCenter">
+
+     
+ 
+        </div>
+
       <div className="topRight">
+        <div className="userInfo">
         <Link to="/users/pic">
           <img className="topImg" src={user.profilepicture} alt="" />
         </Link>
         <Link to={`/users/${id}`}>
-          <h2>{user.username}</h2>{" "}
+          <p className="profileName">{user.username}</p>{" "}
         </Link>
+        </div>
+     
 
-        <button className="logout">
-          <Link to="/" onClick={() => window.localStorage.clear()}>
-            Logout
-          </Link>
-        </button>
-      </div>
+      
+        </div>
+
     </div>
   );
 };

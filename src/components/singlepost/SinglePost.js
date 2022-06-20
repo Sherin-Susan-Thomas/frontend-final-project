@@ -55,10 +55,18 @@ export const SinglePost = () => {
   };
   return (
     <div className="singlePost">
+       <span className="singlePostDate">
+          <b>Date: {new Date(post.createdAt).toDateString()}</b>
+        </span>
       <div className="singlePostWrapper">
+
+     
+        
         {post.picture && (
           <img src={post.picture} alt="" className="singlePostImg" />
         )}
+<div className="singleRow">
+
         {update ? (
           <input
             type="text"
@@ -69,28 +77,15 @@ export const SinglePost = () => {
         ) : (
           <h1 className="singlePostTitle">
             {post.title}
-            {post.username === user && (
-              <div className="singlePostEdit">
-                <i
-                  className="singlePostIcon far fa-edit"
-                  onClick={() => setUpdate(true)}
-                ></i>
-                <i
-                  className="singlePostIcon far fa-trash-alt"
-                  onClick={handleDelete}
-                ></i>
-              </div>
-            )}
+      
           </h1>
         )}
         <div className="singlePostInfo">
           <span className="singlepostAuthor">
-            <b>Author:{post.username}</b>
+            <b>Posted by: {post.username}</b>
           </span>
         </div>
-        <span className="singlePostDate">
-          <b>{new Date(post.createdAt).toDateString()}</b>
-        </span>
+     
         {update ? (
           <input
             type="textarea"
@@ -100,7 +95,7 @@ export const SinglePost = () => {
           />
         ) : (
           <div className="singlePostDesc">
-            <span className="singlepostdesc">{post.description}</span>
+            <p className="singlepostdesc">{post.description}</p>
           </div>
         )}
         {update ? (
@@ -110,6 +105,19 @@ export const SinglePost = () => {
         ) : (
           ""
         )}
+              {post.username === user && (
+              <div className="singlePostEdit">
+              <i
+                className="singlePostIcon far fa-edit"
+                onClick={() => setUpdate(true)}
+              ></i>
+              <i
+                className="singlePostIcon far fa-trash-alt"
+                onClick={handleDelete}
+              ></i>
+            </div>
+            )}
+            </div>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 .posts{
-    display: flex;
-    flex-direction: column;
-flex:1;
-    background-color:rgb(235, 224, 217);
-   
+   flex: 9 1;
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: 10px;
+   justify-content: center;
+   width: fit-content;
 }

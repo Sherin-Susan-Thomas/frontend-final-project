@@ -1,3 +1,7 @@
+
 .home{
-    background-color: white;
+    display: flex;
+    background-color:#C6F1D6;
+    align-items: center;
+
 }

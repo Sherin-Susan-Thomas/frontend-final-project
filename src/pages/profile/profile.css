@@ -1,6 +1,41 @@
 .settings{
-    background-color: white;
+    background-color: #F4E06D;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
 }
-img{
-    height: 100px;
+
+/* .settingsWrapper{
+    background-color: saddlebrown;
+} */
+
+.settingsTitle{
+    text-align: center;
+    font-weight: 500;
+    font-size: 22pt;
 }
+
+.settingsForm{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.settingsPP{
+    margin:12px;
+}
+
+.settingsLabel{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.settingsSubmitButton{
+    width: 120px;
+    margin-top: 25px;
+}
+
+
+/* .settingsInput{
+    margin:12px;
+} */

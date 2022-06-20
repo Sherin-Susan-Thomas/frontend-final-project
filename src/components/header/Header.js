@@ -1,15 +1,17 @@
+
 import React from "react";
 import "./header.css";
+
 
 export const Header = () => {
   return (
     <div className="header">
-      <div className="headerTitles">
-        <span className="headerTitleLg">Travel Memories</span>
-        <span className="headerTitleSm">
-          Share your moments with other users
-        </span>
-      </div>
+
+        <p className="headerTitleLg">MEMORY BOX.</p>
+        <p className="headerTitleSm"><i>Save and share your moments with other users</i>
+        </p>
+   
     </div>
+     
   );
 };

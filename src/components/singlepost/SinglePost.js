@@ -48,7 +48,7 @@ export const SinglePost = () => {
         title: title,
         description: description,
       });
-      window.location.reload();
+      navigate("/home");
     } catch (err) {
       console.log(err);
     }

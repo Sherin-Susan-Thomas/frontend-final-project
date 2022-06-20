@@ -86,7 +86,7 @@ export const Write = () => {
             <label>Title:</label>
             <input
               className="writeInput"
-              placeholder="Title"
+              placeholder="Enter title of your post here"
               type="text"
               autoFocus={true}
               value={title}
@@ -124,7 +124,7 @@ export const Write = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-            <p>Author: {user}</p>
+            <p className="user">User: {user}</p>
           </div>
           <button className="writeSubmit" type="submit">
             Post

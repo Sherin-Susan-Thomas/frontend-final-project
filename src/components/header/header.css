@@ -1,9 +1,10 @@
-.header{
+.header {
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: #F4E06D;
     color: #FFFFDE;
-    max-height: 70px;
+    max-height: 85px;
     text-align: center;
 }
 
@@ -16,6 +17,7 @@
 .headerTitleLg{
     margin-top: 5px;
     font-size: 22pt;
+    text-shadow: -5px -2px #f4e06d;
 
 }
 
@@ -23,6 +25,7 @@
 .headerTitleSm{
     margin-top: -35px;
     font-size: 12pt;
+    color: #FF7396;
 }
 
 
@@ -34,3 +37,24 @@
     object-fit: cover;
 
 }
+
+
+@media screen and (min-width: 1024px){
+
+    .headerTitleLg {
+        margin-top: -80px;
+        font-size: 72pt;
+    }
+
+    .headerTitleSm {
+        margin-top: -120px;
+        font-size: 22pt;
+        margin-bottom: 63px;
+    }
+
+
+}
+
+
+
+

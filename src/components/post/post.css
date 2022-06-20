@@ -60,7 +60,7 @@
 
 .readMore{
     text-decoration: none;
-    text-decoration-line: none;
+    text-underline-offset: none;
     font-style: italic;
     font-size: 10pt;
     height: 25px;
@@ -71,6 +71,11 @@
 .hash{
     color: black;
     font-family: 'Permanent Marker', cursive;
+}
+
+.heart {
+font-size: 20pt;
+color: #FF7396;
 }
 
 .likeBox{

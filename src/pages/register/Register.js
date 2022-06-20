@@ -110,7 +110,7 @@ export const Register = () => {
         <form className="RegisterForm" onSubmit={(e) => handleOnSubmit(e)}>
 
         <div className="inputDiv">
-          <label className="registerLabel" htmlFor="username">username</label>
+          <label className="registerLabel" htmlFor="username">username:</label>
           <input
             type="text"
             placeholder="Enter your username here"
@@ -121,7 +121,7 @@ export const Register = () => {
    {/*        <label htmlFor="picture">PP</label> */}
 
 <div className="inputDiv">
-<label className="registerLabel" htmlFor="email">email</label>
+<label className="registerLabel" htmlFor="email">email:</label>
           <input
             type="text"
             placeholder="Enter your email here"
@@ -132,7 +132,7 @@ export const Register = () => {
 
 
 <div className="inputDiv">
-          <label className="registerLabel" htmlFor="password">password</label>
+          <label className="registerLabel" htmlFor="password">password:</label>
           <input
             type={passwordShown ? "text" : "password"}
             placeholder="Enter your password here"
@@ -177,10 +177,12 @@ export const Register = () => {
               REGISTER
             </button>
 
-            <p>Already have an account? </p>
+            <span className="question"><i>Already have an account? </i></span>
             <button className="registerLoginButton">
               <Link to="/login">LOGIN</Link>
+            
             </button>
+           
           </div>
         </form>
         

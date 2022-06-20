@@ -26,7 +26,7 @@ color:red
 color:green
 }
 .registerBox{ 
-  background-color: #FFFFDE;
+  background-color: rgb(244, 224, 109, 0.7);
   opacity: 0.85;
   margin-top: 16px;
   padding: 20px;
@@ -118,12 +118,82 @@ color:green
   }
 
   @media screen and (min-width: 1024px){
-    .Register {
+    .registerBox {
+      background-color: #FFFFDE;
+      opacity: 0.85;
+      margin-top: 16px;
+      padding: 20px;
+      min-width: 280px;
+      max-width: 40%;
+      height: 500px;
+      border-top-right-radius: 60px;
+  }
+  .registerLabel{
+    font-size: 20pt;
+    font-weight:900;
+    color:#F4E06D;
+  }
+  .RegisterForm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 270px;
+  margin-left: 50%;
+  text-align: center;
+  width: 240px;
+  position: absolute;
+  }
+  .registerLoginButton, .registerButton {
+    font-size: 20pt;
+    height: 55px;
+    border-radius: 30px;
+  }
+  .RegisterTitle {
+      font-size: 80pt;
+      margin-bottom: -58px;
+      margin-top: -12px;
+      margin-left: 25px;
+      padding: 10px;
+}
+.question{
+  color:#F4E06D;
+  font-size: 16pt;
+  font-weight: 500;
+  margin-top:15px;
+  margin-bottom:5px;
+}
+.fa-eye-slash, .fa-eye {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #FF7396;
+  margin-left: 10px;
+}
+
+
+
+  }
+
+    /* .Register {
       flex-direction: row;
-      align-items: flex-start;
+      justify-content: right;
+      align-items: baseline;
       width: 100%;
       height: 700px;
-     
+
+      .Register {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: end;
+        width: 100%;
+        height: 100%;
+    }
+
+
   }
   
   .titleBox{
@@ -143,11 +213,7 @@ color:green
       height: 800px;
     
   }
-.registerLabel{
-  font-size: 28pt;
-  font-weight:900;
-  color:#F4E06D;
-}
+
 .registerInput {
   color: #F19292;
   font-size: 24pt;
@@ -160,4 +226,4 @@ color:green
   color:#F4E06D;
 }
  
-  }
+  } */

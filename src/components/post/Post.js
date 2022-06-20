@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./post.css";
 import { Link } from "react-router-dom";
 
 export const Post = ({ post }) => {
+  const user = JSON.parse(localStorage.getItem("userData"));
+  const postid = post._id;
+  console.log("likeid", postid);
+  console.log(user);
+  const [like, setLike] = useState(post.likes.length);
+  const [isLiked, setIsLiked] = useState(false);
+
+  useEffect(() => {
+    setIsLiked(post.likes.includes(user.username));
+  }, [user._id, post.likes]);
+
+  const likeHandler = () => {
+    try {
+      axios.put(
+        "https://final-sprint.herokuapp.com/api/posts/" + post._id + "/like",
+        { username: user.username }
+      );
+    } catch (err) {}
+    setLike(isLiked ? like - 1 : like + 1);
+    setIsLiked(!isLiked);
+  };
   return (
     <div className="post">
       <h1>
@@ -31,14 +53,12 @@ export const Post = ({ post }) => {
       <Link to={`/post/${post._id}`} className="link">
         <button>Read More</button> <br />
       </Link>
-
-      <button className="likeButton">
+      <button className="likeButton" onClick={likeHandler}>
         <span className="hearts" role="img" aria-label="heart image">
           ❤️
         </span>
       </button>
-
-      <span className="likes"> x {post.likes}</span>
+      <span className="likes">{like} </span>
     </div>
   );
 };

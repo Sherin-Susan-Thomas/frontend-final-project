@@ -63,7 +63,7 @@ export const Write = () => {
     <>
       <div className="backButton">
         <Link to="/home">
-          <i class="fa fa-home" aria-hidden="true"></i>
+          <i className="fa fa-home" aria-hidden="true"></i>
         </Link>
       </div>
       <div className="write">

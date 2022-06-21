@@ -17,7 +17,7 @@ export const TopBar = () => {
             <i className="fa fa-home" aria-hidden="true"></i>
           </Link>
           <Link to="/newpost" className="link">
-            <i class="fa-solid fa-pen-to-square"></i>
+            <i className="fa-solid fa-pen-to-square"></i>
           </Link>
         </p>
       </div>

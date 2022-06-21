@@ -75,11 +75,15 @@ export const Register = () => {
     setPasswordShown(!passwordShown);
   };
   const showicon = (
-    <i class="fas fa-eye-slash" aria-hidden="true" onClick={togglePassword}></i>
+    <i
+      className="fas fa-eye-slash"
+      aria-hidden="true"
+      onClick={togglePassword}
+    ></i>
   );
 
   const hideicon = (
-    <i class="far fa-eye" aria-hidden="true" onClick={togglePassword}></i>
+    <i className="far fa-eye" aria-hidden="true" onClick={togglePassword}></i>
   );
   const handleOnSubmit = (event) => {
     event.preventDefault();
@@ -97,52 +101,53 @@ export const Register = () => {
       .catch((error) => console.log(error));
   };
   return (
-    
     <div className="Register">
       <div className="titleBox">
-      <span className="RegisterTitle">MEMORY</span>
-      <span className="RegisterTitle">BOX.</span>
+        <span className="RegisterTitle">MEMORY</span>
+        <span className="RegisterTitle">BOX.</span>
       </div>
       <p className="z-depth-5"></p>
       <div className="registerBox">
-        
-
         <form className="RegisterForm" onSubmit={(e) => handleOnSubmit(e)}>
-
-        <div className="inputDiv">
-          <label className="registerLabel" htmlFor="username">username:</label>
-          <input
-            type="text"
-            placeholder="Enter your username here"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+          <div className="inputDiv">
+            <label className="registerLabel" htmlFor="username">
+              username:
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your username here"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
-   {/*        <label htmlFor="picture">PP</label> */}
+          {/*        <label htmlFor="picture">PP</label> */}
 
-<div className="inputDiv">
-<label className="registerLabel" htmlFor="email">email:</label>
-          <input
-            type="text"
-            placeholder="Enter your email here"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-</div>
+          <div className="inputDiv">
+            <label className="registerLabel" htmlFor="email">
+              email:
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your email here"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-
-<div className="inputDiv">
-          <label className="registerLabel" htmlFor="password">password:</label>
-          <input
-            type={passwordShown ? "text" : "password"}
-            placeholder="Enter your password here"
-            value={password}
-            onChange={handleOnChange}
-            onFocus={handleOnFocus}
-            onBlur={handleOnBlur}
-            onKeyUp={handleOnKeyUp}
-          />
-</div>
+          <div className="inputDiv">
+            <label className="registerLabel" htmlFor="password">
+              password:
+            </label>
+            <input
+              type={passwordShown ? "text" : "password"}
+              placeholder="Enter your password here"
+              value={password}
+              onChange={handleOnChange}
+              onFocus={handleOnFocus}
+              onBlur={handleOnBlur}
+              onKeyUp={handleOnKeyUp}
+            />
+          </div>
 
           {pwdRequiste ? (
             <PWDRequisite
@@ -164,9 +169,8 @@ export const Register = () => {
             </span>
           )}
 
-<p className="errorMessage">{errorMessage}</p>
+          <p className="errorMessage">{errorMessage}</p>
           <p className="errorMessage">{successMessage}</p>
-        
 
           <div className="buttonBox">
             <button
@@ -177,15 +181,14 @@ export const Register = () => {
               REGISTER
             </button>
 
-            <span className="question"><i>Already have an account? </i></span>
+            <span className="question">
+              <i>Already have an account? </i>
+            </span>
             <button className="registerLoginButton">
               <Link to="/login">LOGIN</Link>
-            
             </button>
-           
           </div>
         </form>
-        
       </div>
     </div>
   );

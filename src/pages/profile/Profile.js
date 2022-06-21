@@ -78,7 +78,7 @@ export const Profile = () => {
     <div className="settings">
       <Link to="/home">
         <button className="homeButton">
-          <i classname="fa fa-home" aria-hidden="true"></i>
+          <i className="fa fa-home" aria-hidden="true"></i>
         </button>
       </Link>
       <div className="settingsWrapper">

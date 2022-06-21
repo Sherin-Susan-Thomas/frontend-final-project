@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { navigate, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 export const Userdetails = () => {
   const [username, setUsername] = useState("");
@@ -54,6 +54,11 @@ export const Userdetails = () => {
   };
   return (
     <div className="settings">
+      <Link to="/home">
+        <button className="homeButton">
+          <i className="fa fa-home" aria-hidden="true"></i>
+        </button>
+      </Link>
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsTitleUpdate">Update Your Account</span>

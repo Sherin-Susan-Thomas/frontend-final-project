@@ -4,6 +4,7 @@ background-position: center;
 background-size: cover;
 display: flex;
 flex-direction: column;
+
 }
 
 .titleBox{
@@ -80,8 +81,9 @@ color:green
   /*INPUT */
 
   .inputDiv {
+ 
     display: flex;
-    flex-direction: column;
+ justify-content: center;
     padding:10px;
   }
 
@@ -89,7 +91,9 @@ color:green
     font-size: 14pt;
     color: #FF8080;
   }
-
+  .registerPwd{
+    display: flex;
+  }
   .registerLabel{
     font-size: 14pt;
     font-weight:900;
@@ -129,7 +133,7 @@ color:green
 
   @media screen and (min-width: 1024px){
     .registerBox {
-      background-color: #FFFFDE;
+      background-color: #fffff1;
       opacity: 0.85;
       margin-top: 16px;
       padding: 20px;

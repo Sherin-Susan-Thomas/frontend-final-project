@@ -66,40 +66,38 @@ export const Login = () => {
       <span className="loginTitle">BOX.</span>
       <div className="loginBox">
         <form className="loginForm" onSubmit={handleOnSubmit}>
-
           <div className="inputDiv">
-          <label className="registerLabel" htmlFor="username">Username</label>
-          <input
-            type="text"
-            placeholder="Enter your username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+            <label className="registerLabel" htmlFor="username">
+              Username
+            </label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
 
           <div className="inputDiv">
-          <label className="registerLabel" htmlFor="password">Password</label>
-          <span>
-            <input
-              type={passwordShown ? "text" : "password"}
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            {!passwordShown ? showicon : hideicon}
-          </span>
+            <label className="registerLabel" htmlFor="password">
+              Password
+            </label>
+            <div className="loginPwd">
+              <input
+                type={passwordShown ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <p>{!passwordShown ? showicon : hideicon}</p>
+            </div>
           </div>
           <p>{errorMessage}</p>
           <div className="buttonBox2">
-        
-          <button className="loginButton">Login</button>
-        
+            <button className="loginButton">Login</button>
 
-          <span className="question">New user? </span>
-          <button className="loginRegisterButton">
-            <Link to="/">New Account</Link>{" "}
-          </button>
-          
+            <span className="question">New user? </span>
+            <button className="loginRegisterButton">
+              <Link to="/">New Account</Link>{" "}
+            </button>
           </div>
         </form>
       </div>

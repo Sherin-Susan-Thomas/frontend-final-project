@@ -6,8 +6,11 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
+    height:100vh
 }
-
+.loginPwd{
+  display: flex;
+}
 .loginTitle{
     font-size: 54pt;
     color: #F4E06D;
@@ -92,7 +95,7 @@
     padding: 20px;
     min-width: 280px;
     max-width: 40%;
-    height: 500px;
+    height: 400px;
     border-top-right-radius: 60px;
 }
 .registerLabel{

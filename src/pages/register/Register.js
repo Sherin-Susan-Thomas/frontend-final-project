@@ -115,7 +115,6 @@ export const Register = () => {
             </label>
             <input
               type="text"
-              placeholder="Enter your username here"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -128,7 +127,6 @@ export const Register = () => {
             </label>
             <input
               type="text"
-              placeholder="Enter your email here"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -138,15 +136,17 @@ export const Register = () => {
             <label className="registerLabel" htmlFor="password">
               password:
             </label>
-            <input
-              type={passwordShown ? "text" : "password"}
-              placeholder="Enter your password here"
-              value={password}
-              onChange={handleOnChange}
-              onFocus={handleOnFocus}
-              onBlur={handleOnBlur}
-              onKeyUp={handleOnKeyUp}
-            />
+            <div className="registerPwd">
+              <input
+                type={passwordShown ? "text" : "password"}
+                value={password}
+                onChange={handleOnChange}
+                onFocus={handleOnFocus}
+                onBlur={handleOnBlur}
+                onKeyUp={handleOnKeyUp}
+              />
+              <p> {!passwordShown ? showicon : hideicon}</p>
+            </div>
           </div>
 
           {pwdRequiste ? (
@@ -157,7 +157,7 @@ export const Register = () => {
               specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
             />
           ) : null}
-          {!passwordShown ? showicon : hideicon}
+
           {error === "" ? null : (
             <span
               style={{

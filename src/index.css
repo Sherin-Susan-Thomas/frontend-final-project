@@ -49,14 +49,14 @@ button {
 
 
 input{
-  border: none;
+  border-width: 0 0 2px;
 background-color: transparent;
-color: #e7d2d7;
+color: #3a1f25;
 font-family: 'Jost', sans-seri;
-font-size: 16pt;
+font-size: 13pt;
 height: 30px;
-width: 100%;
-padding: 2px;
+width:200px;
+margin-left:10px;
 }
 textarea{
 margin:10px 10px 0 10px;

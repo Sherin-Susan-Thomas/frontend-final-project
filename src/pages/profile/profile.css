@@ -32,9 +32,10 @@
 .settingsLabel{
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #FF7396;
+    color: #3a3134;
     font-size: 14pt;
     font-weight: 500;
+    margin: 10px;
 }
 
 .settingsSubmitButton{
@@ -67,6 +68,7 @@
     }
     .settingsLabel {
         font-size: 20pt;
+        margin:10px
     }
 }
 
@@ -85,4 +87,9 @@
     background-color: #F4E06D;
     border: solid #FF7396;
     border-radius: 10px;
+}
+.userprofile{
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
 }

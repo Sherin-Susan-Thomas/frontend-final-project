@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { API_URL } from "components/utils/url";
+import { Link } from "react-router-dom";
 import "./profile.css";
 
 export const Profile = () => {
@@ -75,19 +76,31 @@ export const Profile = () => {
 
   return (
     <div className="settings">
+      <Link to="/home">
+        <button className="homeButton">Home</button>
+      </Link>
       <div className="settingsWrapper">
         <div className="settingsTitle">Update Your Profile</div>
-        <label className="settingsLabel">username: </label>{user.username}
-        <label className="settingsLabel">email: </label>{user.email}
+        <div>
+          <img
+            src={user.profilepicture}
+            alt="porfile_user"
+            className="userprofile"
+          />
+          <span className="settingsLabel">{user.username}</span>
+        </div>
 
-      
         <form className="settingsForm" onSubmit={(e) => e.preventDefault()}>
           <label></label>
           <div className="settingsPP">
             <label htmlFor="fileInput"></label>
             <br />
 
-            <img className="profilePic" src={!image ? user.profilepicture : url} alt="" />
+            <img
+              className="profilePic"
+              src={!image ? user.profilepicture : url}
+              alt=""
+            />
             <input
               id="fileInput"
               placeholder="Choose a new picture"
@@ -103,7 +116,7 @@ export const Profile = () => {
               type="submit"
               onClick={() => postDetails()}
             >
-              Update Profile picture
+              Update
             </button>
           ) : (
             ""

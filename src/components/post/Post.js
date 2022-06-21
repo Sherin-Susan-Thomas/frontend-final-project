@@ -53,8 +53,7 @@ export const Post = ({ post }) => {
         <button className="readMore">Read More</button> <br />
       </Link>
       <button className="likeButton" onClick={likeHandler}>
-      <i class="fa-solid fa-heart"></i>
-       
+        <i class="fa-solid fa-heart"></i>
       </button>
       <span className="likes">{like} </span>
     </div>

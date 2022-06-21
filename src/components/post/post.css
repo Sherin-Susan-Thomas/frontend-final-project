@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: -7px;
 }
 
 .postTitle{
@@ -23,10 +22,6 @@
     text-align: center;
     margin-bottom: -5px;
     font-family: 'Permanent Marker', cursive;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
 }
 
 .postImg{

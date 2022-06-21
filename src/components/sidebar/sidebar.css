@@ -41,7 +41,9 @@ align-items: center;
 }
 
 .sidebarList {
-  display: flex;
-
+    display: flex;
     margin-bottom: 30px;
+    align-content: center;
+    margin: 10px;
+    flex-wrap: wrap;
 }

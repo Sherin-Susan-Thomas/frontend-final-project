@@ -15,16 +15,16 @@
 } 
 
 .headerTitleLg{
-    margin-top: 5px;
-    font-size: 22pt;
+    margin-top: -30px;
+    font-size: 30pt;
     text-shadow: -5px -2px #f4e06d;
-
 }
 
 
 .headerTitleSm{
-    margin-top: -35px;
+    margin-top: -50px;
     font-size: 12pt;
+    font-style: italic;
     color: #FF7396;
 }
 

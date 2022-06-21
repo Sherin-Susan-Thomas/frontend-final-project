@@ -6,17 +6,18 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height:100vh
+/*     height:100vh; */
 }
 .loginPwd{
   display: flex;
 }
 .loginTitle{
-    font-size: 54pt;
+    font-size: 44pt;
     color: #F4E06D;
-    margin-bottom: -40px;
+    margin-bottom: -48px;
     margin-top: -20px;
-    padding: 10px;
+    padding: 21px;
+    font-family: 'Righteous', cursive;
 }
 
 .loginBox{  
@@ -112,7 +113,7 @@
 .buttonBox2 {
 display: flex;
 flex-direction: column;
-margin-top: 270px;
+margin-top: 235px;
 margin-left: 50%;
 text-align: center;
 width: 240px;
@@ -124,8 +125,8 @@ position: absolute;
   border-radius: 30px;
 }
 .loginTitle{
-    font-size: 80pt;
-    margin-bottom: -45px;
+    font-size: 72pt;
+    margin-bottom: -30px;
     margin-top: -12px;
     margin-left: 25px;
     padding: 10px;
@@ -136,5 +137,11 @@ font-size: 16pt;
 font-weight: 500;
 margin-top:15px;
 margin-bottom:5px;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 }

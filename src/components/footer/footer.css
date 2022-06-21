@@ -1,11 +1,12 @@
 .footer{
-    height:180px;
+    height:120px;
     width:100%;
-    background-color: aquamarine;
+    background-color: #C499BA;
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: absolute;
     bottom:0;
+    color:rgb(244, 224, 109)
 }
 
 .bottomRight{
@@ -14,10 +15,10 @@
 
 .footerTitle{
     font-family: 'Righteous', cursive;
-    color: #FF7396;
-    text-shadow: -15px -15px rgb(255 115 150 / 30%);
-    font-size: 35pt;
-    margin: 45px;
+    color: rgb(244, 224, 109);
+    text-shadow: -15px -15px rgb(244 224 109 / 30%);
+    font-size: 20pt;
+    margin: 35px;
 }
 
 
@@ -27,11 +28,11 @@
     flex-direction: column;
 }
 
-h3 {
-    margin-top:40px;
-    margin-bottom: 15px;
+h4 {
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
 
-h3, .nameDetails{
+h4, .nameDetails{
     margin-left:30px;
 }

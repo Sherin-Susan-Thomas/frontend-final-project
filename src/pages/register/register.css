@@ -13,11 +13,12 @@ flex-direction: column;
 }
 
 .RegisterTitle{
-  font-size: 54pt;
+  font-size: 44pt;
   color: #F4E06D;
-  margin-bottom: -40px;
+  margin-bottom: -48px;
   margin-top: -20px;
-  padding: 10px;
+  padding: 21px;
+  font-family: 'Righteous', cursive;
 }
 .invalid{
 color:red
@@ -114,9 +115,10 @@ color:green
           margin: 70px;
       } */
       .RegisterTitle{
-        font-size: 70pt;
-        margin-bottom: -25px;
-        margin-top: -30px;
+        font-size: 58pt;
+    margin-bottom: -55px;
+    margin-top: -30px;
+    padding: 26px;
       }
       .registerBox {
         max-width: 75%;

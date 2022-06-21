@@ -58,6 +58,10 @@
         font-size: 18pt;
         font-weight: 500;
     }
+    .profilePic{
+        height: 250px;
+        width: 250px;
+    }
 }
 
 @media screen and (min-width: 1024px){

@@ -16,19 +16,30 @@
 
 .headerTitleLg{
     margin-top: -30px;
-    font-size: 30pt;
+    font-size: 34pt;
     text-shadow: -5px -2px #f4e06d;
+    font-family: 'Righteous', cursive;;
 }
 
 
 .headerTitleSm{
-    margin-top: -50px;
-    font-size: 12pt;
-    font-style: italic;
+    margin-top: -52px;
+    font-size: 14pt;
+    font-style: ITALIC;
     color: #FF7396;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+.headerTitleLg {
+    margin-top: -44px;
+    font-size: 50pt;
+}
+.headerTitleSm {
+    margin-top: -76px;
+    font-size: 18pt;
+}
 
+}
 
 
 

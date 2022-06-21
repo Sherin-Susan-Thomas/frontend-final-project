@@ -4,8 +4,9 @@
     background-color: #F4E06D;
     margin: 20px;
     border-radius: 5px;
-    padding: 20px;
+    padding: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 

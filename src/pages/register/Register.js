@@ -6,6 +6,8 @@ import PWDRequisite from "./PWDRequisite";
 import validator from "validator";
 import "./register.css";
 
+/* import { Footer } from "components/footer/Footer"; */
+
 export const Register = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -190,6 +192,8 @@ export const Register = () => {
           </div>
         </form>
       </div>
+{/*    <Footer /> */}
     </div>
+    
   );
 };

@@ -88,10 +88,12 @@ color: #FF7396;
     margin-left: -10px;
 }
 
-.likeButton{
-    flex:6;
-    width:30px;
+.likeButton {
+    flex: 6 1;
+    width: 30px;
     background: transparent;
+    font-size: 18pt;
+    color: #FF7396;
 }
 
 @media screen and (min-width: 1200px)  {

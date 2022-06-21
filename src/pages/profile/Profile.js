@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { API_URL } from "components/utils/url";
 import { Link } from "react-router-dom";
+
 import "./profile.css";
 
 export const Profile = () => {
@@ -127,6 +128,7 @@ export const Profile = () => {
         <p>{errorMessage}</p>
         <p>{successMessage}</p>
       </div>
+
     </div>
   );
 };

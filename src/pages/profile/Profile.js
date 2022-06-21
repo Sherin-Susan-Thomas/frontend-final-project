@@ -76,16 +76,18 @@ export const Profile = () => {
   return (
     <div className="settings">
       <div className="settingsWrapper">
-        <div className="settingsTitle"></div>
-        Username: <h1>{user.username}</h1>
-        Email: <h1>{user.email}</h1>
+        <div className="settingsTitle">Update Your Profile</div>
+        <label className="settingsLabel">username: </label>{user.username}
+        <label className="settingsLabel">email: </label>{user.email}
+
+      
         <form className="settingsForm" onSubmit={(e) => e.preventDefault()}>
           <label></label>
           <div className="settingsPP">
             <label htmlFor="fileInput"></label>
             <br />
 
-            <img src={!image ? user.profilepicture : url} alt="" />
+            <img className="profilePic" src={!image ? user.profilepicture : url} alt="" />
             <input
               id="fileInput"
               placeholder="Choose a new picture"

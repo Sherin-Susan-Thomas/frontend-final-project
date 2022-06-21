@@ -105,10 +105,10 @@ color:green
 
   /*Media queries*/
 
-  @media screen and (min-width: 600px) and (max-width: 1023) {
-      body{
+  @media screen and (min-width: 600px) and (max-width: 1023px) {
+    /*   body{
           margin: 70px;
-      }
+      } */
       .RegisterTitle{
         font-size: 70pt;
         margin-bottom: -25px;

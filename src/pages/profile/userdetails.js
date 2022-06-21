@@ -57,7 +57,7 @@ export const Userdetails = () => {
           <span className="settingsTitleUpdate">Update Your Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
-          <label>Profile Picture</label>
+        {/*   <label>Profile Picture</label> */}
           <div className="settingsPP"></div>
           <label className="settingsLabel">Username</label>
           <input className="settingsInput"

@@ -1,24 +1,28 @@
+/*UPDATE USER DETAILS*/
+
 .settings{
     background-color: #F4E06D;
     margin: 20px;
     border-radius: 5px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
-
-/* .settingsWrapper{
-    background-color: saddlebrown;
-} */
 
 .settingsTitle{
     text-align: center;
     font-weight: 500;
     font-size: 22pt;
+    margin-bottom: 10px;
 }
 
 .settingsForm{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
+    background-color: #FFFFDE;
+    border-radius: 15px;
+    margin-top: 20px;
 }
 
 .settingsPP{
@@ -28,6 +32,9 @@
 .settingsLabel{
     margin-bottom: 5px;
     margin-top: 5px;
+    color: #FF7396;
+    font-size: 14pt;
+    font-weight: 500;
 }
 
 .settingsSubmitButton{
@@ -35,7 +42,47 @@
     margin-top: 25px;
 }
 
+/*MEDIA QUERIES*/
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .settings {
+        background-color: transparent;
+    }
+    .settingsTitle{
+        font-weight: 700;
+        font-size: 30pt;
+        margin-bottom: 15px;
+    }
+    .settingsLabel {
+        font-size: 18pt;
+        font-weight: 500;
+    }
+}
 
-/* .settingsInput{
-    margin:12px;
-} */
+@media screen and (min-width: 1024px){
+    .settings {
+        background-color: transparent;
+    }
+    .settingsTitle{
+        font-size: 40pt;
+    }
+    .settingsLabel {
+        font-size: 20pt;
+    }
+}
+
+/*UPDATE PROFILE PICTURE*/
+
+.settingsWrapper{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profilePic{
+    height: 150px;
+    width: 150px;
+    background-color: #F4E06D;
+    border: solid #FF7396;
+    border-radius: 10px;
+}

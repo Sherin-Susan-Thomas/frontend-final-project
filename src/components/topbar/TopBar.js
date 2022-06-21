@@ -11,29 +11,16 @@ export const TopBar = () => {
   return (
     <div className="topBar">
       <div className="topLeft">
-        <button className="logout">
-          <Link
-            to="/"
-            onClick={() => window.localStorage.clear()}
-            className="link"
-          >
-            Logout
-          </Link>
-        </button>
-
-        <ul className="topList">
+        <p className="topList">
           <Link to="/home " className="link">
             {" "}
-            <li className="topListItem">HOME</li>
+            <i className="fa fa-home" aria-hidden="true"></i>
           </Link>
           <Link to="/newpost" className="link">
-            <li className="topListItem">NEW POST</li>
+            <i class="fa-solid fa-pen-to-square"></i>
           </Link>
-          <li className="topListItem">FAVOURITES</li>
-        </ul>
+        </p>
       </div>
-
-      <div className="topCenter"></div>
 
       <div className="topRight">
         <div className="userInfo">
@@ -45,6 +32,15 @@ export const TopBar = () => {
           </Link>
         </div>
       </div>
+      <button className="logout">
+        <Link
+          to="/"
+          onClick={() => window.localStorage.clear()}
+          className="link"
+        >
+          Logout
+        </Link>
+      </button>
     </div>
   );
 };

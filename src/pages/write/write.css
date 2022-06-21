@@ -8,7 +8,7 @@
     align-items: center;
     flex-wrap: wrap;
     background: #FFFFDE;
-    border: solid #F4E06D;
+    border: solid #e7d887;
     margin: 3%;
     padding: 15px;
     border-radius: 5px;
@@ -20,7 +20,7 @@
     margin: 10px;
     border: solid #FF7396;
     border-radius: 20px;
-    background-color: #F4E06D;
+    background-color: #ece4b6;
 }
 
 .writeIcon {
@@ -67,7 +67,9 @@
     color:#FF7396;
     font-size: 16pt;
 }
-
+.link{
+    text-decoration: none;
+}
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 600px) and (max-width: 1023px){
@@ -80,10 +82,9 @@
         margin: 10px;
         border: solid #FF7396;
         border-radius: 20px;
-        background-color: rgb(255, 255, 222, 0.7);
+        background-color: #FFFFDE;
     }
-.writeForm{
-        background-color: #F4E06D;
+.writeForm{        background-color: #FFFFDE;
         padding: 25px;
         margin: 10px;
         border-radius: 20px;
@@ -113,10 +114,10 @@
         margin: 10px;
         border: solid #FF7396;
         border-radius: 20px;
-        background-color: rgb(255, 255, 222, 0.7);
+        background-color: #FFFFDE;
     }
 .writeForm{
-        background-color: #F4E06D;
+        background-color: #FFFFDE;
         padding: 25px;
         margin: 10px;
         border-radius: 20px;
@@ -132,7 +133,7 @@
 }
 .writeIcon {
     font-size: 30pt;
-    color: #FF7396;
+    color: #e0b5c0;
 }
 .writeText {
     width: 98%;

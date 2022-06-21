@@ -2,6 +2,11 @@
 .home{
     display: flex;
     background-color:#FFFFDE;
-    align-items: center;
+  
 
+}
+.cat{
+    display: flex;
+flex-direction: row;
+background-color:#FFFFDE;
 }

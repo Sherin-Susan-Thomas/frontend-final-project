@@ -61,39 +61,40 @@ export const Write = () => {
 
   return (
     <>
-    <div className="backButton">
-      <Link to="/home">
-        <button>Back to homepage</button>
-      </Link>
+      <div className="backButton">
+        <Link to="/home">
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </Link>
       </div>
       <div className="write">
-        
         <img className="writeImge" src={url} alt="" />
         <form className="writeForm" onSubmit={(e) => postDetails(e)}>
           <div className="writeFormGroup">
-            <label htmlFor="fileInput"> 
+            <label htmlFor="fileInput">
               <i className="writeIcon fas fa-plus"></i>
             </label>
-            <input className="chooseFile"
+            <input
+              className="chooseFile"
               id="fileInput"
               type="file"
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <button className="addPicture" onClick={() => postpicture()}>Add Picture</button>
-            
+            <button className="addPicture" onClick={() => postpicture()}>
+              Add Picture
+            </button>
+
             <div className="detailsInput">
-            <label>Title:</label>
-            <input
-              className="writeInput"
-              placeholder="Enter title of your post here"
-              type="text"
-              autoFocus={true}
-              value={title}
-              required
-              onChange={(e) => setTitle(e.target.value)}
-            />
-  
+              <label>Title:</label>
+              <input
+                className="writeInput"
+                placeholder="Enter title of your post here"
+                type="text"
+                autoFocus={true}
+                value={title}
+                required
+                onChange={(e) => setTitle(e.target.value)}
+              />
             </div>
             <label>Choose #: </label>
             <select
@@ -110,7 +111,6 @@ export const Write = () => {
               <option value="Asia">Asia</option>
               <option value="America">America</option>
             </select>
-      
           </div>
           <div className="writeFormGroup">
             <textarea

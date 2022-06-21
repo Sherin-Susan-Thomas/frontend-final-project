@@ -21,29 +21,23 @@ export const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
-        <ul className="sidebarList">
+        <div className="sidebarList">
+          <b>
+            <span>Tags:</span>
+          </b>
           {categories.map((category) => {
             return (
               <div key={category._id}>
-                <Link to={`/home/?category=${category.name}`}>
+                <Link to={`/home/?category=${category.name}`} className="link">
                   {" "}
-                  <li>{category.name}</li>
+                  <span className="cat_name"> #{category.name}</span>
                 </Link>
               </div>
             );
           })}
-        </ul>
+        </div>
       </div>
-      <div className="sidebarItem">
-        {/* <span className="sidebarTitle">FOLLOW US</span>
-         <div className="sidebarSocial">
-          <i className="sidebarIcon fa-brands fa-facebook-f"></i>
-          <i className="sidebarIcon fa-brands fa-instagram"></i>
-          <i className="sidebarIcon fa-brands fa-github"></i>
-          <i className="sidebarIcon fa-solid fa-at"></i>
-        </div>*/}
-      </div>
+      <div className="sidebarItem"></div>
     </div>
   );
 };

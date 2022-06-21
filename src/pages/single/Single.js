@@ -8,12 +8,11 @@ import "./single.css";
 export const Single = () => {
   return (
     <div className="single">
-    <Link to="/home">
-      
-        <button className="homeButton">Home</button>
-
+      <Link to="/home" className="link">
+        <button className="homeButton">
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
       </Link>
-      
 
       <SinglePost />
     </div>

@@ -2,49 +2,55 @@
   display: flex;
   flex-direction: row;
   min-width:375px;
-
   top: 0;
   width: 100%;
-  min-height: 80px;
+  min-height: 120px;
   background-color:#C499BA;
   color:#C6F1D6;
 }
 
 .topLeft{
-  flex: 3 1;
+
   display: flex;
   flex-direction: column;
   justify-content: left;
   margin-top: 15px;
-  margin-left: 30px;
+;
 }
 
 .logout{
   width: 75px;
   height: 30px;
   font-size: 10pt;
+  margin: 10px;
 }
-
+.fa-home{
+  border: 2px solid rgb(220, 209, 209);
+  border-radius: 50%;
+  padding: 10px;
+}
+.fa-pen-to-square{
+  border: 2px solid rgb(220, 209, 209);
+  border-radius: 50%;
+  padding: 10px;
+  margin-left:7px;
+}
 .topList {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: -5px;
+  margin: 10px;
+  margin-top: -10px;
   padding: 15px;
-  list-style: none;
 }
 
- .topCenter {
-  flex: 3;
-}
+
 
 .topRight {
-  flex: 3;
+  flex: 1;
  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5px; 
+ flex-direction: row;
+ margin-top: -10px;
+ justify-content: flex-end;
+
 }
 
 .topListItem {
@@ -52,6 +58,7 @@
   font-size: 12pt;
   font-weight: 500;
   cursor: pointer;
+  padding: 10px;
 }
 
 .topImg {

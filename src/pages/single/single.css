@@ -6,20 +6,18 @@
     border-radius: 5px;
     padding: 5px;
 }
+.link{
+    text-decoration: none;
+}
 
 .homeButton{
-    margin:10px;
-    font-family: 'Jost', sans-seri;
-    font-size: 18px;
-    font-weight: 600;
-    align-items: center;
-    appearance: none;
-    background-color: #FF8080;
+   
+    background-color: transparent;
     border-radius: 20px;
     border-style: none;
     border-color: #F6D186;
     box-sizing: border-box;
-    color: #342B38;
+    color: #470b78;
     cursor: pointer;
     display: inline-flex;
     height: 40px;

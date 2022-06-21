@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { navigate, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 export const Userdetails = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState("");
-
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("userData"));
   console.log(user);
   const location = useLocation();
@@ -45,7 +45,9 @@ export const Userdetails = () => {
         updatedUser
       );
       console.log(res);
-      setSuccess("updated successfully. Login again");
+      setSuccess("updated successfully");
+      localStorage.clear();
+      navigate("/login");
     } catch (err) {
       console.log(err);
     }
@@ -57,10 +59,11 @@ export const Userdetails = () => {
           <span className="settingsTitleUpdate">Update Your Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
-        {/*   <label>Profile Picture</label> */}
+          {/*   <label>Profile Picture</label> */}
           <div className="settingsPP"></div>
           <label className="settingsLabel">Username</label>
-          <input className="settingsInput"
+          <input
+            className="settingsInput"
             type="text"
             placeholder={user.username}
             name="name"
@@ -75,6 +78,7 @@ export const Userdetails = () => {
           />
           <label className="settingsLabel">Password</label>
           <input
+            required
             type="password"
             placeholder="Password"
             name="password"

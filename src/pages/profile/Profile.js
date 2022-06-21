@@ -77,7 +77,9 @@ export const Profile = () => {
   return (
     <div className="settings">
       <Link to="/home">
-        <button className="homeButton">Home</button>
+        <button className="homeButton">
+          <i classname="fa fa-home" aria-hidden="true"></i>
+        </button>
       </Link>
       <div className="settingsWrapper">
         <div className="settingsTitle">Update Your Profile</div>

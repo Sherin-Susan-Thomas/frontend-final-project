@@ -51,14 +51,23 @@ button {
 input{
   border: none;
 background-color: transparent;
-color: #FF7396;
+color: #e7d2d7;
 font-family: 'Jost', sans-seri;
 font-size: 16pt;
 height: 30px;
 width: 100%;
 padding: 2px;
 }
+textarea{
+margin:10px 10px 0 10px;
+background-color: transparent;
+color: #eae0e2;
+font-family: 'Jost', sans-seri;
+font-size: 16pt;
+width: 100%;
 
+padding: 2px;
+}
 input::placeholder{
   color:#342B38;
 }

@@ -24,9 +24,15 @@
     margin: 10px;
     font-size: 30pt;
 } 
-
+.profilepicture{
+    border: 1px solid black;
+    border-radius: 50%;
+    height:40px;
+    width:40px
+}
 .singlepostAuthor{
-    font-weight: 300;
+  float: left;
+    font-weight:600;
     font-size: 12pt;
 }
 
@@ -38,14 +44,16 @@
 
 .singlePostEdit{
     display: flex;
-    margin: 5px;
+   justify-content: end;
+
 }
 
 .singlePostIcon{
+    cursor: pointer;
     float: right;
     font-size: 22px;
     padding: 5px;
-    color: #FF8080;
+    color: #e3dcdc;
   }
 
 
@@ -75,14 +83,11 @@
     .singlePostDesc{
         font-size: 18pt;
     }
-    .singlePostWrapper{
-        flex-direction: row;
-        justify-content: left;
-    }
+   
     .singleRow{
-        margin-left: 25px;
+       
         margin-right: 20px;
-        margin-top: -30px;
+        margin-top: 20px;
     }
 }
 

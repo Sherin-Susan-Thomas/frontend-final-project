@@ -11,7 +11,7 @@ export const SinglePost = () => {
   const [update, setUpdate] = useState("");
   const navigate = useNavigate();
   const user = localStorage.getItem("user");
-
+  const userdata = JSON.parse(localStorage.getItem("userData"));
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
@@ -55,58 +55,28 @@ export const SinglePost = () => {
   };
   return (
     <div className="singlePost">
-       <span className="singlePostDate">
-          <b>Date: {new Date(post.createdAt).toDateString()}</b>
-        </span>
+      <span className="singlePostDate">
+        <div className="singlePostInfo"></div>
+      </span>
       <div className="singlePostWrapper">
-
-     
-        
+        <span className="singlepostAuthor">
+          <img
+            className="profilepicture"
+            src={userdata.profilepicture}
+            alt=""
+          />
+          <b> {post.username}</b>
+        </span>
+        <b>
+          <i> {new Date(post.createdAt).toDateString()}</i>
+        </b>
         {post.picture && (
           <img src={post.picture} alt="" className="singlePostImg" />
         )}
-<div className="singleRow">
 
-        {update ? (
-          <input
-            type="text"
-            value={title}
-            className="singlePostTitleInput"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        ) : (
-          <h1 className="singlePostTitle">
-            {post.title}
-      
-          </h1>
-        )}
-        <div className="singlePostInfo">
-          <span className="singlepostAuthor">
-            <b>Posted by: {post.username}</b>
-          </span>
-        </div>
-     
-        {update ? (
-          <input
-            type="textarea"
-            value={description}
-            className="singlepostdescInput"
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        ) : (
-          <div className="singlePostDesc">
-            <p className="singlepostdesc">{post.description}</p>
-          </div>
-        )}
-        {update ? (
-          <button className="singlePostButton" onClick={handleupdate}>
-            Update post
-          </button>
-        ) : (
-          ""
-        )}
-              {post.username === user && (
-              <div className="singlePostEdit">
+        <div className="singleRow">
+          {post.username === user && (
+            <div className="singlePostEdit">
               <i
                 className="singlePostIcon far fa-edit"
                 onClick={() => setUpdate(true)}
@@ -116,8 +86,40 @@ export const SinglePost = () => {
                 onClick={handleDelete}
               ></i>
             </div>
-            )}
+          )}
+          {update ? (
+            <input
+              type="text"
+              value={title}
+              className="singlePostTitleInput"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          ) : (
+            <h1 className="singlePostTitle">{post.title}</h1>
+          )}
+
+          {update ? (
+            <textarea
+              type="text"
+              rows="4"
+              cols="50"
+              value={description}
+              className="singlepostdescInput"
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          ) : (
+            <div className="singlePostDesc">
+              <p className="singlepostdesc">{post.description}</p>
             </div>
+          )}
+          {update ? (
+            <button className="singlePostButton" onClick={handleupdate}>
+              Update post
+            </button>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

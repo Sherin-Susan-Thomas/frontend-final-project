@@ -49,7 +49,9 @@ width:300px;
     margin-top: -15px;
     margin-left: -10px;
 }
-
+.link{
+    text-decoration: none;
+}
 .postDate{
     font-style: italic;
     font-size: 12pt;

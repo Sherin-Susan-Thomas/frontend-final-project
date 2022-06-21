@@ -83,7 +83,7 @@ export const Profile = () => {
         </button>
       </Link>
       <div className="settingsWrapper">
-        <div className="settingsTitle">Update Your Profile</div>
+        <div className="settingsTitle">Update Your Profile Picture</div>
         <div>
           <img
             src={user.profilepicture}

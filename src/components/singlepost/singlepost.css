@@ -6,10 +6,13 @@
 }
 
 .singlePostWrapper{
-    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
 }
 
 .singlePostImg{
@@ -49,11 +52,12 @@
 }
 
 .singlePostIcon{
+    margin-top: 10px;
     cursor: pointer;
     float: right;
     font-size: 22px;
     padding: 5px;
-    color: #e3dcdc;
+    color: #FF7396;
   }
 
 

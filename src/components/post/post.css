@@ -1,12 +1,10 @@
 .post{
-
     max-width: 360px;
     margin: 10px 25px 25px 10px;
     background-color: white;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    
 }
 
 .postHeader{
@@ -18,7 +16,7 @@
 .postTitle{
     font-size: 30pt;
     line-height: 40px;
-    color: black;
+    color: #342929;
     text-align: center;
     margin-bottom: -5px;
     font-family: 'Permanent Marker', cursive;
@@ -74,7 +72,7 @@ width:300px;
     border-radius: 5px;
 }
 .hash{
-    color: black;
+    color: #342929;
     font-family: 'Permanent Marker', cursive;
 }
 

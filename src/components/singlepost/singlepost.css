@@ -24,6 +24,7 @@
     border-radius: 5px;
 }
 .singlePostTitle{
+    letter-spacing: 3px;
     font-family: 'Permanent Marker', cursive;
     margin: 10px;
     font-size: 30pt;
@@ -42,6 +43,7 @@
 }
 
 .singlePostDesc{
+   
     margin-left: 10px;
     margin-right: 10px;
     font-size: 10pt;
@@ -84,7 +86,7 @@
  
 
     .singlePostTitle{
-        font-size: 45pt;
+        font-size: 35pt;
     } 
     .singlepostAuthor{
         font-size: 20pt;

@@ -20,7 +20,12 @@
     text-shadow: -5px -2px #f4e06d;
     font-family: 'Righteous', cursive;;
 }
+.headerimage{
+    height:50px;
+    width:50px;
 
+  
+}
 
 .headerTitleSm{
     margin-top: -52px;
@@ -57,6 +62,12 @@
         margin-top: -95px;
         font-size: 22pt;
         margin-bottom: 63px;
+    }
+    .headerimage{
+        height:80px;
+        width:80px;
+    z-index: 2;
+      
     }
 }
 

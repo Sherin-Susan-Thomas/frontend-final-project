@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./topbar.css";
-
 export const TopBar = () => {
   const user = JSON.parse(localStorage.getItem("userData"));
 

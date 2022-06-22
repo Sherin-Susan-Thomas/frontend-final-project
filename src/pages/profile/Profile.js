@@ -128,7 +128,6 @@ export const Profile = () => {
         <p>{errorMessage}</p>
         <p>{successMessage}</p>
       </div>
-
     </div>
   );
 };

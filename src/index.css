@@ -71,3 +71,25 @@ padding: 2px;
 input::placeholder{
   color:#342B38;
 }
+.aboutus{
+  text-align: center;
+ 
+}
+.fa-linkedin-in{
+  color: rgb(22, 20, 20);
+  border: 3px solid rgb(23, 21, 21);
+  border-radius: 50%;
+padding: 5px;
+margin:2px;
+}
+.fa-github{
+  color: rgb(22, 20, 20);
+  border: 3px solid rgb(23, 21, 21);
+  border-radius: 50%;
+padding: 5px; 
+margin:2px;
+}
+.contacts{
+  text-align: center;
+  margin:10px;
+}

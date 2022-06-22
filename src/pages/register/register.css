@@ -4,6 +4,7 @@ background-position: center;
 background-size: cover;
 display: flex;
 flex-direction: column;
+height: 100vh;
 
 }
 

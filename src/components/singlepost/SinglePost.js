@@ -70,10 +70,6 @@ export const SinglePost = () => {
         <b>
           <i> {new Date(post.createdAt).toDateString()}</i>
         </b>
-        {post.picture && (
-          <img src={post.picture} alt="" className="singlePostImg" />
-        )}
-
         <div className="singleRow">
           {post.username === user && (
             <div className="singlePostEdit">
@@ -87,6 +83,10 @@ export const SinglePost = () => {
               ></i>
             </div>
           )}
+          {post.picture && (
+            <img src={post.picture} alt="" className="singlePostImg" />
+          )}
+
           {update ? (
             <input
               type="text"

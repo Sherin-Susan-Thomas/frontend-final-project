@@ -107,7 +107,7 @@ export const Write = () => {
               <option value="Countries">Countries</option>
               <option value="Europe">Europe</option>
               <option value="Cities">Cities</option>
-              <option value="Wonders of the World">Wonders of the World</option>
+              <option value="Wonders of the world">Wonders of the World</option>
               <option value="Asia">Asia</option>
               <option value="America">America</option>
             </select>

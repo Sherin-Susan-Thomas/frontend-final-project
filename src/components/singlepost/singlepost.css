@@ -6,6 +6,7 @@
 }
 
 .singlePostWrapper{
+    margin-right:10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +35,8 @@
     width:40px
 }
 .singlepostAuthor{
-  float: left;
+    margin-right:10px;
+
     font-weight:600;
     font-size: 12pt;
 }
@@ -42,7 +44,7 @@
 .singlePostDesc{
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 .singlePostEdit{
@@ -63,6 +65,7 @@
 
 
   @media screen and (min-width: 600px) and (max-width: 1000px) {
+    
     .singlePostTitle{
         font-size: 40pt;
     } 
@@ -78,6 +81,8 @@
 }
 
 @media screen and (min-width: 1000px){
+ 
+
     .singlePostTitle{
         font-size: 45pt;
     } 
@@ -85,7 +90,9 @@
         font-size: 20pt;
     }
     .singlePostDesc{
-        font-size: 18pt;
+        font-size: 15pt;
+        inline-size: 500px;
+        text-align: justify; 
     }
    
     .singleRow{

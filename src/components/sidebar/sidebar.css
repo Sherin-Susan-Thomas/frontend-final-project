@@ -1,6 +1,6 @@
 .sidebar {
     flex:9;
-align-items: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     background-color:#FFFFDE;
@@ -13,20 +13,21 @@ align-items: center;
     flex-direction: column;
     align-items: left;
 }
+
 .link{
     text-decoration: none;
 }
+
 .cat_name{
     margin:10px;
 }
+
 .sidebarTitle{
     margin: 10px;
     padding: 5px;
     border-top: 1px solid #C6F1D6;
     color:#0b0b0b;
-    font-family: 'Jost', sans-serif;
     font-size: 18px;
-
     line-height: 20px;
     text-align: left;
 }

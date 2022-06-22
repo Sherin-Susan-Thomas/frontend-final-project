@@ -53,6 +53,7 @@ export const SinglePost = () => {
       console.log(err);
     }
   };
+  
   return (
     <div className="singlePost">
       <span className="singlePostDate">

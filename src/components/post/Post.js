@@ -25,6 +25,7 @@ export const Post = ({ post }) => {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
+
   return (
     <div className="post">
       <div className="postHeader">
@@ -41,7 +42,6 @@ export const Post = ({ post }) => {
       <div className="postInfo">
         <p className="postAuthor">
           <strong> Posted by: </strong>
-
           <Link to={`/home/?user=${post.username}`} className="link">
             {post.username}
           </Link>

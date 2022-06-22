@@ -30,12 +30,14 @@ width:300px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
 }
+
 .postInfo{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 50px;
 }
+
 .postDetails{
     display: flex;
     flex-direction: row;
@@ -43,15 +45,18 @@ width:300px;
     margin-top: -15px;
     margin-left: -10px;
 }
+
 .link{
     text-decoration: none;
 }
+
 .postDate{
     font-style: italic;
     font-size: 12pt;
     margin-top: 15px;
     margin-bottom: -15px;
 }
+
 .postDesc{
     width: 300px;
     overflow: hidden;
@@ -72,6 +77,7 @@ width:300px;
     margin-top: 5px;
     border-radius: 5px;
 }
+
 .hash{
     color: #342929;
     font-family: 'Permanent Marker', cursive;
@@ -95,13 +101,14 @@ color: #FF7396;
     color: #FF7396;
 }
 
+/*MEDIA QUERIES DESKTOP*/
+
 @media screen and (min-width: 1200px)  {
     .postImg{
         width:350px;
-  
         }
+
         .postDesc{
             width: 350px;
-        
         }
 }

@@ -18,6 +18,7 @@ export const SideBar = () => {
 
     getcategory();
   }, []);
+  
   return (
     <div className="sidebar">
       <div className="sidebarItem">

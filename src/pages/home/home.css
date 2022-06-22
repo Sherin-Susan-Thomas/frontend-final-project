@@ -1,12 +1,28 @@
 
-.home{
+.home, .cat{
     display: flex;
     background-color:#FFFFDE;
-  
+}
 
-}
 .cat{
-    display: flex;
 flex-direction: row;
-background-color:#FFFFDE;
 }
+
+.contacts,.aboutus,.fa-brands, .fab {
+    color: #F4E06D;
+    border:none;
+    font-size: 12pt;
+    text-align: center;
+    margin:2px;
+}
+
+.fa-brands, .fab{
+    font-size: 16pt;
+    padding: 5px; 
+}
+
+  .contacts{
+    text-align: center;
+    margin:10px;
+  } 
+  

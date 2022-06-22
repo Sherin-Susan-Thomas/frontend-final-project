@@ -35,10 +35,17 @@ export const HomePage = () => {
       </div>
       <div className="cat"></div>
       <h4 className="aboutus">Copyright &copy; Jenny & Sherin {date}</h4>
+
       <h4 className="contacts">
-        <i> Jenny Fiskaare</i> <i className="fab fa-linkedin-in"></i>{" "}
-        <i className="fa-brands fa-github"></i>
+        <i> Jenny Fiskaare</i> 
+        <a href="https://www.linkedin.com/in/jenny-fiskaare-9b295ab1/">
+        <i className="fab fa-linkedin-in"></i>{" "}
+        </a>
+        <a href="https://github.com/JenFi72?tab=repositories">
+          <i className="fa-brands fa-github"></i>
+        </a>
       </h4>
+
       <h4 className="contacts">
         <i>Sherin Susan Thomas</i>
         <a href="https://www.linkedin.com/in/dr-sherin-thomas/">

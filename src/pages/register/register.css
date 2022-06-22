@@ -5,7 +5,6 @@ background-size: cover;
 display: flex;
 flex-direction: column;
 height: 100vh;
-
 }
 
 .titleBox{
@@ -21,12 +20,7 @@ height: 100vh;
   padding: 21px;
   font-family: 'Righteous', cursive;
 }
-.invalid{
-color:red
-}
-.valid{
-color:green
-}
+
 .registerBox{ 
   background-color: rgb(255, 255, 222, 0.8);
   opacity: 0.85;
@@ -38,10 +32,23 @@ color:green
   border-top-right-radius: 60px;
 }
 
+.registerLabel{
+  font-size: 14pt;
+  font-weight:900;
+  color:#FF7396;
+}
+
 .RegisterForm{
   display: flex;
     flex-direction: column;
     margin-top: -10px;
+}
+
+.invalid{
+color:red
+}
+.valid{
+color:green
 }
 
 .fa-eye-slash, .fa-eye {
@@ -50,12 +57,6 @@ color:green
   color: #FF7396;
   margin-left: 10px;
   margin-top: -10px;
-}
-
-.registerLabel{
-  font-size: 14pt;
-  font-weight:900;
-  color:#F4E06D;
 }
 
 .buttonBox{
@@ -80,10 +81,7 @@ color:green
     background: #FFBA92;
   }
 
-  /*INPUT */
-
-  .inputDiv {
- 
+  .inputDiv { 
     display: flex;
  justify-content: center;
     padding:10px;
@@ -93,14 +91,11 @@ color:green
     font-size: 14pt;
     color: #FF8080;
   }
+
   .registerPwd{
     display: flex;
   }
-  .registerLabel{
-    font-size: 14pt;
-    font-weight:900;
-    color:#FF7396;
-  }
+
   
   .message{
     font-size: 10pt;
@@ -109,21 +104,18 @@ color:green
   }
 
 
-  /*Media queries*/
+  /*MEDIA QUERIES -TABLET*/
 
   @media screen and (min-width: 600px) and (max-width: 1023px) {
-    /*   body{
-          margin: 70px;
-      } */
+ 
       .RegisterTitle{
-        font-size: 58pt;
+    font-size: 58pt;
     margin-bottom: -55px;
     margin-top: -30px;
     padding: 26px;
       }
       .registerBox {
         max-width: 75%;
-       
       }
       .registerButton, .registerLoginButton {
        max-width: 50%;      
@@ -134,36 +126,25 @@ color:green
     }
   }
 
+    /*MEDIA QUERIES -DESKTOP*/
+
   @media screen and (min-width: 1024px){
     .registerBox {
-      background-color: #fffff1;
-      opacity: 0.85;
-      margin-top: 16px;
-      padding: 20px;
-      min-width: 280px;
       max-width: 40%;
-      height: 500px;
-      border-top-right-radius: 60px;
   }
   .registerLabel{
     font-size: 20pt;
     font-weight:900;
-    color:#F4E06D;
   }
   .RegisterForm {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
-
 .buttonBox {
-  display: flex;
-  flex-direction: column;
   margin-top: 270px;
   margin-left: 50%;
-  text-align: center;
   width: 240px;
-  position: absolute;
   }
   .registerLoginButton, .registerButton {
     font-size: 20pt;

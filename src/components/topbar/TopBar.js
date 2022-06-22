@@ -9,6 +9,7 @@ export const TopBar = () => {
 
   return (
     <div className="topBar">
+
       <div className="topLeft">
         <p className="topList">
           <Link to="/home " className="link">
@@ -31,6 +32,7 @@ export const TopBar = () => {
           </Link>
         </div>
       </div>
+      
       <button className="logout">
         <Link
           to="/"

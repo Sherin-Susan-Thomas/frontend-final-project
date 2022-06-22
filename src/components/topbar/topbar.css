@@ -16,12 +16,14 @@
   margin-top: 15px;
 }
 
-.logout{
-  width: 75px;
-  height: 30px;
-  font-size: 10pt;
-  margin: 10px;
+.topRight {
+  flex: 1;
+ display: flex;
+ flex-direction: row;
+ margin-top: -10px;
+ justify-content: flex-end;
 }
+
 .fa-home, .fa-pen-to-square{
   border-radius: 50%;
   padding: 6px;
@@ -34,15 +36,6 @@
   margin: 10px;
   margin-top: -10px;
   padding: 15px;
-}
-
-.topRight {
-  flex: 1;
- display: flex;
- flex-direction: row;
- margin-top: -10px;
- justify-content: flex-end;
-
 }
 
 .topListItem {
@@ -74,14 +67,14 @@
 .userInfo{
   display: flex;
   align-items: center;
-
 }
 
-
-/*  
-
-
-
+.logout{
+  width: 75px;
+  height: 30px;
+  font-size: 10pt;
+  margin: 10px;
+}
 
  
 
@@ -97,66 +90,8 @@
 
 
 
-.menu-btn{
-  position: relative;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width:80px;
-  height:80px;
-  cursor: pointer;
-  transition: all .5s ease-in-out;
-  border: 3 px solid red;
-}
 
 
-
-
- */
-/* 
-.menu-btn_burger{
-  width:50px;
-  height:6px;
-  background:blue;
-  border-radius:5px;
-  box-shadow: 0 2px 5px pink;
-  transition: all .5s ease-in-out; 
-}
-
-.menu-btn_burger::before,
-.menu-btn_burger::after{
-content: ' ';
-position:absolute;
-width:50px;
-  height:6px;
-  background:blue;
-  border-radius:5px;
-  box-shadow: 0 2px 5px pink;
-  transition: all .5s ease-in-out; 
-}
-/* 
-.menu-btn_burger::before{
-  transform: translateY(-16px);  
-}
-
-.menu-btn_burger::after{
-  transform: translateY(16px);  
-}
- */
-
-
-
-/* 
-
-
-
-
-
-
-
-
-
-
- */
+  
 
  

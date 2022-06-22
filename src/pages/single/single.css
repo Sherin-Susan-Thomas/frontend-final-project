@@ -11,7 +11,6 @@
 }
 
 .homeButton{
-   
     background-color: transparent;
     border-radius: 20px;
     border-style: none;
@@ -37,10 +36,3 @@
     will-change: transform,opacity;
     z-index: 0;
 }
-/* 
-@media screen and (min-width: 801px){
-    .single{
-        background-color: transparent;
-        color:#E0F5B9;
-    }
-    } */

@@ -23,27 +23,28 @@
     max-height: 500px;
     border-radius: 5px;
 }
+
 .singlePostTitle{
     letter-spacing: 3px;
     font-family: 'Permanent Marker', cursive;
     margin: 10px;
     font-size: 30pt;
-} 
+}
+
 .profilepicture{
     border: 1px solid black;
     border-radius: 50%;
     height:40px;
     width:40px
 }
+
 .singlepostAuthor{
     margin-right:10px;
-
     font-weight:600;
     font-size: 12pt;
 }
 
 .singlePostDesc{
-   
     margin-left: 10px;
     margin-right: 10px;
     font-size: 10pt;
@@ -52,7 +53,6 @@
 .singlePostEdit{
     display: flex;
    justify-content: flex-end;
-
 }
 
 .singlePostIcon{
@@ -64,7 +64,7 @@
     color: #FF7396;
   }
 
-
+/* MEDIA QUERIES TABLET*/
 
   @media screen and (min-width: 600px) and (max-width: 1000px) {
     
@@ -82,23 +82,25 @@
       }
 }
 
+/* MEDIA QUERIES DESKTOP*/
+
 @media screen and (min-width: 1000px){
  
-
     .singlePostTitle{
         font-size: 35pt;
-    } 
+    }
+
     .singlepostAuthor{
         font-size: 20pt;
     }
+
     .singlePostDesc{
         font-size: 15pt;
         inline-size: 500px;
         text-align: justify; 
     }
    
-    .singleRow{
-       
+    .singleRow{   
         margin-right: 20px;
         margin-top: 20px;
     }

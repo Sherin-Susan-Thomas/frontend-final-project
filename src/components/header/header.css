@@ -8,6 +8,8 @@
     text-align: center;
 }
 
+/*TITLE*/
+
 .headerTitles{
     display: flex;
     flex-wrap: wrap;
@@ -20,12 +22,6 @@
     text-shadow: -5px -2px #f4e06d;
     font-family: 'Righteous', cursive;;
 }
-.headerimage{
-    height:50px;
-    width:50px;
-
-  
-}
 
 .headerTitleSm{
     margin-top: -52px;
@@ -33,6 +29,13 @@
     font-style: ITALIC;
     color: #FF7396;
 }
+
+.headerimage{
+    height:50px;
+    width:50px;
+}
+
+/*MEDIA QUIRIES -TABLET*/
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
 .headerTitleLg {
@@ -43,14 +46,12 @@
     margin-top: -76px;
     font-size: 18pt;
 }
-
 }
 
-
+/*MEDIA QUIRIES -DESKTOP*/
 
 
 @media screen and (min-width: 1024px){
-
     .headerTitleLg {
  letter-spacing: 3px;
         margin-top: -50px;
@@ -63,11 +64,11 @@
         font-size: 22pt;
         margin-bottom: 63px;
     }
+
     .headerimage{
         height:80px;
         width:80px;
     z-index: 2;
-      
     }
 }
 

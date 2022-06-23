@@ -24,11 +24,9 @@ export const Write = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        setUrl(data.url);
+        setUrl(data.secure_url);
       })
       .catch((err) => {
-        console.log(err);
         console.log(err);
       });
   };
@@ -50,10 +48,7 @@ export const Write = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success === false) {
-          console.log(data);
         } else {
-          console.log(data);
-
           navigate("/home");
         }
       });

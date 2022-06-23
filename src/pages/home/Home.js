@@ -12,14 +12,13 @@ export const HomePage = () => {
   const date = new Date().getFullYear();
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
-  console.log();
 
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get(
         "https://final-sprint.herokuapp.com/api/posts" + search
       );
-      console.log(res.data);
+
       setPosts(res.data);
     };
     fetchPosts();

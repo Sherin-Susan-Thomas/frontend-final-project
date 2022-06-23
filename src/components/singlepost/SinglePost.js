@@ -21,7 +21,7 @@ export const SinglePost = () => {
       const res = await axios.get(
         "https://final-sprint.herokuapp.com/api/posts/" + path
       );
-      console.log(res);
+
       setPost(res.data);
       setTitle(res.data.title);
       setDescription(res.data.description);
@@ -36,9 +36,7 @@ export const SinglePost = () => {
         { data: { username: user } }
       );
       navigate("/home");
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
   };
 
   const handleupdate = async () => {

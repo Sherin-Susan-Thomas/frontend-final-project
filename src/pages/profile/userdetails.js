@@ -8,9 +8,7 @@ export const Userdetails = () => {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("userData"));
-  console.log(user);
   const location = useLocation();
-  console.log(location);
   const path = location.pathname.split("/")[2];
   useEffect(() => {
     const getuserdetails = () => {
@@ -22,7 +20,6 @@ export const Userdetails = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           setEmail(data.email);
           setUsername(data.username);
         });
@@ -40,11 +37,11 @@ export const Userdetails = () => {
     };
 
     try {
-      const res = await axios.put(
+      await axios.put(
         "https://final-sprint.herokuapp.com/api/users/" + user._id,
         updatedUser
       );
-      console.log(res);
+
       setSuccess("updated successfully");
       localStorage.clear();
       navigate("/login");

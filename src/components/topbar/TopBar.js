@@ -5,7 +5,6 @@ export const TopBar = () => {
   const user = JSON.parse(localStorage.getItem("userData"));
 
   const id = user._id;
-  console.log("id", id);
 
   return (
     <div className="topBar">

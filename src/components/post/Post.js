@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 export const Post = ({ post }) => {
   const user = JSON.parse(localStorage.getItem("userData"));
-  const postid = post._id;
-  console.log("likeid", postid);
-  console.log(user);
+
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
 

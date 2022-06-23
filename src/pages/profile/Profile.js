@@ -6,11 +6,8 @@ import "./profile.css";
 
 export const Profile = () => {
   const user = JSON.parse(localStorage.getItem("userData"));
-  console.log(user);
-  console.log(user.profilepicture);
   const id = user._id;
-  console.log(user.username);
-  console.log(id);
+
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [image, setImage] = useState("");
@@ -32,13 +29,8 @@ export const Profile = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          console.log("upload a picture");
         } else {
-          console.log("data", data);
-
-          setUrl((prev) => {
-            console.log("prev", prev);
-            console.log("updated url in setUrl", data.url);
+          setUrl(() => {
             //write user update here, push new url to your mongoDB -> ONLY UPDATE IMAGE,
 
             fetch(`${API_URL}/users/${id}`, {
@@ -57,7 +49,6 @@ export const Profile = () => {
                   setErrorMessage("Try posting again");
                   setSuccessMessage("");
                 } else {
-                  console.log("data from fetch", data1);
                   localStorage.removeItem("userData");
                   localStorage.setItem("userData", JSON.stringify(data1));
                   setTimeout(setSuccessMessage("updated successfully"), 2000);

@@ -53,7 +53,6 @@ export const Login = () => {
             localStorage.setItem("accessToken", data.accessToken);
           localStorage.setItem("userData", JSON.stringify(data));
           localStorage.setItem("user", data.username);
-          console.log(data);
           navigate("/home");
         }
       })

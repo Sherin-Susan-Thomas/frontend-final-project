@@ -12,7 +12,7 @@ export const SideBar = () => {
       const res = await axios.get(
         "https://final-sprint.herokuapp.com/api/categories"
       );
-      console.log(res.data);
+
       setCategories(res.data);
     };
 

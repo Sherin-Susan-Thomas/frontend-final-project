@@ -32,7 +32,7 @@ export const Profile = () => {
         } else {
           setUrl(() => {
             //write user update here, push new url to your mongoDB -> ONLY UPDATE IMAGE,
-            console.log(data);
+
             fetch(`${API_URL}/users/${id}`, {
               method: "PUT",
               headers: {
